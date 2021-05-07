@@ -15,15 +15,15 @@ Olá, me chamo Gabriel Silva tenho 17 anos sou apaixonado por programação e ar
 
 ### Estou Estudando
 
-<code><img title='Javascript' height="30" src="./GitHub/javascript.svg"></code>
-<code><img title='React' height="30" src="./GitHub/react.svg"></code>
+<code><img title='Javascript' height="30" src=".GitHub/javascript.svg"></code>
+<code><img title='React' height="30" src=".GitHub/react.svg"></code>
 
 
 ### Pretendo Estudar
 
-<code><img title='Typescript' height="30" src="./GitHub/Typescript.svg"></code>
-<code><img title='Next.Js' height="30" src="./GitHub/nextjs.png"></code>
-<code><img title='React Native' alt='React Native' height="30" src="./GitHub/react-native-logo.png"></code>
+<code><img title='Typescript' height="30" src=".GitHub/Typescript.svg"></code>
+<code><img title='Next.Js' height="30" src=".GitHub/nextjs.png"></code>
+<code><img title='React Native' alt='React Native' height="30" src=".GitHub/react-native-logo.png"></code>
 
 ### GitHub Stats
 
