@@ -1,0 +1,163 @@
+//
+section#options {
+
+   display        : flex;
+   justify-content: center;
+
+   animation-delay: .1s;
+
+   ul {
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows   : 1fr 1fr 1fr;
+
+      gap: 2rem;
+      gap: clamp(.5rem, 3.5vw, 3rem);
+
+      height: 45rem;
+      height: clamp(30rem, 60vh, 50rem);
+      width : 90%;
+      width : clamp(27rem, 90vw, 50rem);
+
+      .option {
+
+         a {
+
+            border-radius  : 1.4rem;
+            cursor         : pointer;
+            text-decoration: none;
+
+            position: relative;
+
+            display        : flex;
+            flex-direction : column;
+            align-items    : center;
+            justify-content: center;
+
+            font-size: 2rem;
+            font-size: clamp(16px, 6vw, 2.5rem);
+
+            list-style: none;
+
+            height: 100%;
+
+            padding: 2rem 0;
+
+            i {
+
+               height: 4.5rem;
+               height: clamp(4rem, 5vw, 5rem);
+               width : 100%;
+               width : clamp(4rem, 5vw, 5rem);
+
+               svg {
+
+                  width : 100%;
+                  height: 100%;
+               }
+            }
+
+            p {
+
+               color: #fff;
+
+               margin-top: 1rem;
+            }
+         }
+
+         a:hover {
+
+            border: solid 2px #fff;
+         }
+      }
+
+      .yt {
+
+         background: #ca0000;
+      }
+
+      .ig {
+
+         background-image: linear-gradient(to left bottom, #8134af, #a42aa4, #c02095, #d61f86, #e62975, #ee336b, #f43f60, #f84c56, #fa544f, #fa5d48, #fb6542, #fa6e3b);
+
+      }
+
+      .tt {
+
+         background-color: #0076a5;
+      }
+
+      .gh {
+
+         background: #381b6e;
+      }
+
+      .lkd {
+
+         background-color: #0A66C2;
+      }
+
+      .mailBox {
+
+         position: relative;
+         width   : 100%;
+         height  : 100%;
+
+         a {
+
+            background: #282A36;
+            z-index   : 1;
+         }
+
+         .mailInfo {
+
+            background   : #282A36;
+            border       : none;
+            border-radius: 100%;
+            box-shadow   : 0 0 5px #0003;
+            display      : none;
+
+            cursor: pointer;
+
+            width   : 4.4rem;
+            width   : clamp(4rem, 2vw, 6rem);
+            height  : 4.4rem;
+            height  : clamp(4rem, 2vw, 6rem);
+            position: absolute;
+
+            top    : -1rem;
+            right  : -1rem;
+            z-index: 20;
+
+            overflow: hidden;
+
+            svg {
+
+               width : 100%;
+               height: 100%;
+            }
+         }
+
+         &:hover button.mailInfo {
+
+            display: block;
+         }
+      }
+   }
+}
+
+@media only screen and (max-width:1280px) {
+
+   section#options {
+      ul {
+         .mailBox {
+            .mailInfo {
+
+               display: block;
+            }
+         }
+      }
+   }
+}

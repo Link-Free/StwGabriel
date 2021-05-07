@@ -1,0 +1,38 @@
+//
+#copy__popup-alert {
+
+   background-color: #44475A;
+   border          : solid 1px #fff2;
+   border-radius   : 1rem;
+   box-shadow      : 0 0 50px #0005;
+   color           : #fff;
+
+   display        : flex;
+   justify-content: center;
+   align-items    : center;
+
+   font-size  : 2.5rem;
+   font-size  : clamp(13px, 5vw, 2.5rem);
+
+   width    : 80vw;
+   max-width: 50rem;
+   width    : clamp(25rem, 80vw, 50rem);
+
+   padding: 2rem 0;
+
+   position : absolute;
+   left     : 50%;
+   transform: translateX(-50%);
+}
+
+.offScreen {
+
+   transition-duration: .15s;
+   top                : -10rem;
+}
+
+.onScreen {
+
+   transition-duration: .3s;
+   top                : 5rem;
+}

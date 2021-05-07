@@ -1,0 +1,70 @@
+//
+/*
+
+if you see duplicate code like: 
+
+"
+   width: 3rem;
+   width: clamp (2rem, 5vw, 5rem)
+"
+
+the answer is that some browsers are not compatible with 'clamp ()'so I did this to reverse this problem,
+of course there will be a difference between what I want and the end result,
+but it is only until the browsers provide full support for the 'clamp ()'
+
+*/
+:root {
+
+   color: #fff;
+
+   font-size  : 62.5%;
+   font-family: 'Montserrat', sans-serif;
+}
+
+* {
+
+   box-sizing: border-box;
+
+   text-shadow: 0 0 5rem #0005;
+   font-weight: 600;
+
+   padding: 0;
+   margin : 0;
+}
+
+body {
+
+   background     : #21222C;
+   display        : flex;
+   align-items    : center;
+   justify-content: space-around;
+
+   min-height: 100vh;
+   width     : 100%;
+}
+
+li {
+
+   list-style: none;
+}
+
+a:active {
+
+   transform: scale(.95);
+}
+
+body {
+
+   display       : flex;
+   flex-direction: column;
+
+   main {
+
+      display        : flex;
+      flex-direction : column;
+      align-items    : center;
+      justify-content: center;
+
+      margin: 0 auto;
+   }
+}

@@ -1,0 +1,22 @@
+//
+footer {
+
+   font-size: 13px;
+
+   display        : flex;
+   align-items    : center;
+   justify-content: center;
+
+   width: 100%;
+
+   p {
+
+      color: #fff;
+
+      a {
+
+         color          : #10a6d3;
+         text-decoration: none;
+      }
+   }
+}

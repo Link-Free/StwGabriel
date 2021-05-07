@@ -1,0 +1,157 @@
+.modalOverlay {
+
+   background: #000b;
+
+   display        : none;
+   align-items    : center;
+   justify-content: center;
+
+   position: fixed;
+   bottom  : 0;
+   left    : 0;
+   top     : 0;
+   right   : 0;
+
+   z-index: 200;
+
+   .modalBox {
+
+      background     : #44475A;
+      border-radius  : 2rem;
+      display        : flex;
+      flex-direction : column;
+      align-items    : center;
+      justify-content: center;
+
+      width: 90vw;
+      width: clamp(25rem, 90vw, 60rem);
+
+      padding: 6rem 2rem;
+      padding: 6rem clamp(.5rem, 4vw, 8rem);
+
+      position: relative;
+
+      >button {
+
+         background: transparent;
+         border    : none;
+         cursor    : pointer;
+
+         width: 25px;
+
+         position: absolute;
+         top     : 3rem;
+         top     : clamp(2rem, 2vw, 8rem);
+         right   : 3rem;
+         right   : clamp(2rem, 2vw, 8rem);
+
+         outline-offset: 5px;
+
+         &:active {
+            transform: scale(.95);
+         }
+
+         img {
+
+            width: 3rem;
+         }
+      }
+
+      p {
+
+         color      : #fff;
+         font-size  : 2.8rem;
+         font-size  : clamp(13px, 5vw, 3rem);
+         font-weight: 500;
+      }
+
+      .inputBox {
+
+         border       : solid 1px #282A36;
+         border-radius: 1rem;
+
+         display        : flex;
+         align-items    : center;
+         justify-content: center;
+
+         width     : 100%;
+         padding   : 1rem .5rem;
+         margin-top: 2rem;
+
+         input {
+
+            background : transparent;
+            border     : none;
+            color      : #fff;
+            font-size  : 2.5rem;
+            font-size  : clamp(13px, 5vw, 3rem);
+
+            height     : 100%;
+            width      : 101%;
+
+            &:active {
+               transform: scale(.95);
+            }
+         }
+
+         button {
+
+            background: transparent;
+            border    : none;
+            cursor    : pointer;
+
+            outline-offset: 5px;
+
+            width: 35px;
+
+            margin-left: 5px;
+            position   : relative;
+
+            &:active {
+               transform: scale(.95);
+            }
+
+            img {
+
+               width: 3rem;
+            }
+
+            &:hover::after {
+
+               content: 'copiar';
+
+               background   : #282A36;
+               border-radius: 1rem;
+               color        : #ffff;
+
+               font-size: 2rem;
+               font-size: clamp(13px, 2vw, 2rem);
+
+               position: absolute;
+               top     : -40px;
+               right   : -10px;
+
+               padding: .5rem;
+            }
+         }
+      }
+   }
+}
+
+.active {
+
+   display: flex;
+}
+
+@media (max-width: 380px) {
+   .modalOverlay {
+      .modalBox {
+         .inputBox {
+
+            input {
+               font-size: clamp(13px 5vw, 6rem);
+            }
+         }
+      }
+   }
+}
