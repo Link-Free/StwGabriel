@@ -117,7 +117,7 @@ section#options {
             border       : none;
             border-radius: 100%;
             box-shadow   : 0 0 5px #0003;
-            display      : none;
+            display      : block;
 
             cursor: pointer;
 
@@ -155,7 +155,7 @@ section#options {
          .mailBox {
             .mailInfo {
 
-               display: block;
+               display: none;
             }
          }
       }

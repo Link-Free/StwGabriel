@@ -237,7 +237,7 @@ section#options ul .mailBox .mailInfo {
   border-radius: 100%;
   -webkit-box-shadow: 0 0 5px #0003;
           box-shadow: 0 0 5px #0003;
-  display: none;
+  display: block;
   cursor: pointer;
   width: 4.4rem;
   width: clamp(4rem, 2vw, 6rem);
@@ -261,7 +261,7 @@ section#options ul .mailBox:hover button.mailInfo {
 
 @media only screen and (max-width: 1280px) {
   section#options ul .mailBox .mailInfo {
-    display: block;
+    display: none;
   }
 }
 
