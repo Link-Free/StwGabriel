@@ -27,9 +27,7 @@ Olá, me chamo Gabriel Silva tenho 17 anos sou apaixonado por programação e ar
 
 ### GitHub Stats
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=StwGabriel&show_icons=true&theme=dark)](https://github.com/StwGabriel/github-readme-stats)
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=StwGabriel&layout=compact&theme=dark)](https://github.com/StwGabriel/github-readme-stats)
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=StwGabriel&show_icons=true&theme=dark)](https://github.com/StwGabriel/github-readme-stats) | [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=StwGabriel&layout=compact&theme=dark)](https://github.com/StwGabriel/github-readme-stats)
 
 ## Social e Profissional
 
