@@ -148,11 +148,12 @@ section#options {
    }
 }
 
-@media only screen and (max-width:1280px) {
+@media only screen and (max-width:600px) {
 
    section#options {
       ul {
          .mailBox {
+            
             .mailInfo {
 
                display: none;

@@ -16,12 +16,11 @@ but it is only until the browsers provide full support for the 'clamp ()'
 :root {
   color: #fff;
   font-size: 62.5%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-shadow: 0 0 5rem #0005;
   font-weight: 600;
   padding: 0;
@@ -30,14 +29,9 @@ but it is only until the browsers provide full support for the 'clamp ()'
 
 body {
   background: #21222C;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
   min-height: 100vh;
   width: 100%;
 }
@@ -47,56 +41,30 @@ li {
 }
 
 a:active {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 body main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
 }
 
 /**/
 header#header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: clamp(2.5rem, 1vw, 10rem);
   width: 100%;
 }
-
 header#header .picBox {
   border-radius: 100%;
   height: 13rem;
@@ -106,19 +74,16 @@ header#header .picBox {
   margin: 1rem;
   overflow: hidden;
 }
-
 header#header .picBox img {
   height: 100%;
   width: 100%;
 }
-
 header#header h1 {
   color: #fff;
   font-size: 2.7rem;
   font-size: clamp(16px, 6vw, 3rem);
   margin: 1rem 0;
 }
-
 header#header span {
   color: #ddd;
   font-size: 1.4rem;
@@ -128,115 +93,82 @@ header#header span {
 
 /**/
 section#options {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-animation-delay: .1s;
-          animation-delay: .1s;
+  justify-content: center;
+  animation-delay: 0.1s;
 }
-
 section#options ul {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 2rem;
-  gap: clamp(0.5rem, 3.5vw, 3rem);
+  gap: clamp(.5rem, 3.5vw, 3rem);
   height: 45rem;
   height: clamp(30rem, 60vh, 50rem);
   width: 90%;
   width: clamp(27rem, 90vw, 50rem);
 }
-
 section#options ul .option a {
   border-radius: 1.4rem;
   cursor: pointer;
   text-decoration: none;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-size: 2rem;
   font-size: clamp(16px, 6vw, 2.5rem);
   list-style: none;
   height: 100%;
   padding: 2rem 0;
 }
-
 section#options ul .option a i {
   height: 4.5rem;
   height: clamp(4rem, 5vw, 5rem);
   width: 100%;
   width: clamp(4rem, 5vw, 5rem);
 }
-
 section#options ul .option a i svg {
   width: 100%;
   height: 100%;
 }
-
 section#options ul .option a p {
   color: #fff;
   margin-top: 1rem;
 }
-
 section#options ul .option a:hover {
   border: solid 2px #fff;
 }
-
 section#options ul .yt {
   background: #ca0000;
 }
-
 section#options ul .ig {
-  background-image: -webkit-gradient(linear, right top, left bottom, from(#8134af), color-stop(#a42aa4), color-stop(#c02095), color-stop(#d61f86), color-stop(#e62975), color-stop(#ee336b), color-stop(#f43f60), color-stop(#f84c56), color-stop(#fa544f), color-stop(#fa5d48), color-stop(#fb6542), to(#fa6e3b));
   background-image: linear-gradient(to left bottom, #8134af, #a42aa4, #c02095, #d61f86, #e62975, #ee336b, #f43f60, #f84c56, #fa544f, #fa5d48, #fb6542, #fa6e3b);
 }
-
 section#options ul .tt {
   background-color: #0076a5;
 }
-
 section#options ul .gh {
   background: #381b6e;
 }
-
 section#options ul .lkd {
   background-color: #0A66C2;
 }
-
 section#options ul .mailBox {
   position: relative;
   width: 100%;
   height: 100%;
 }
-
 section#options ul .mailBox a {
   background: #282A36;
   z-index: 1;
 }
-
 section#options ul .mailBox .mailInfo {
   background: #282A36;
   border: none;
   border-radius: 100%;
-  -webkit-box-shadow: 0 0 5px #0003;
-          box-shadow: 0 0 5px #0003;
+  box-shadow: 0 0 5px #0003;
   display: block;
   cursor: pointer;
   width: 4.4rem;
@@ -249,41 +181,30 @@ section#options ul .mailBox .mailInfo {
   z-index: 20;
   overflow: hidden;
 }
-
 section#options ul .mailBox .mailInfo svg {
   width: 100%;
   height: 100%;
 }
-
 section#options ul .mailBox:hover button.mailInfo {
   display: block;
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 600px) {
   section#options ul .mailBox .mailInfo {
     display: none;
   }
 }
-
 /**/
 footer {
   font-size: 13px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
-
 footer p {
   color: #fff;
 }
-
 footer p a {
   color: #10a6d3;
   text-decoration: none;
@@ -293,12 +214,8 @@ footer p a {
 .modalOverlay {
   background: #000b;
   display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -306,30 +223,19 @@ footer p a {
   right: 0;
   z-index: 200;
 }
-
 .modalOverlay .modalBox {
   background: #44475A;
   border-radius: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 90vw;
   width: clamp(25rem, 90vw, 60rem);
   padding: 6rem 2rem;
-  padding: 6rem clamp(0.5rem, 4vw, 8rem);
+  padding: 6rem clamp(.5rem, 4vw, 8rem);
   position: relative;
 }
-
 .modalOverlay .modalBox > button {
   background: transparent;
   border: none;
@@ -342,40 +248,28 @@ footer p a {
   right: clamp(2rem, 2vw, 8rem);
   outline-offset: 5px;
 }
-
 .modalOverlay .modalBox > button:active {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  transform: scale(0.95);
 }
-
 .modalOverlay .modalBox > button img {
   width: 3rem;
 }
-
 .modalOverlay .modalBox p {
   color: #fff;
   font-size: 2.8rem;
   font-size: clamp(13px, 5vw, 3rem);
   font-weight: 500;
 }
-
 .modalOverlay .modalBox .inputBox {
   border: solid 1px #282A36;
   border-radius: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  padding: 1rem .5rem;
+  padding: 1rem 0.5rem;
   margin-top: 2rem;
 }
-
 .modalOverlay .modalBox .inputBox input {
   background: transparent;
   border: none;
@@ -385,12 +279,9 @@ footer p a {
   height: 100%;
   width: 101%;
 }
-
 .modalOverlay .modalBox .inputBox input:active {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  transform: scale(0.95);
 }
-
 .modalOverlay .modalBox .inputBox button {
   background: transparent;
   border: none;
@@ -400,18 +291,14 @@ footer p a {
   margin-left: 5px;
   position: relative;
 }
-
 .modalOverlay .modalBox .inputBox button:active {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  transform: scale(0.95);
 }
-
 .modalOverlay .modalBox .inputBox button img {
   width: 3rem;
 }
-
 .modalOverlay .modalBox .inputBox button:hover::after {
-  content: 'copiar';
+  content: "copiar";
   background: #282A36;
   border-radius: 1rem;
   color: #ffff;
@@ -420,12 +307,10 @@ footer p a {
   position: absolute;
   top: -40px;
   right: -10px;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .active {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -434,75 +319,37 @@ footer p a {
     font-size: clamp(13px 5vw, 6rem);
   }
 }
-
 /**/
-@-webkit-keyframes Down {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
 @keyframes Down {
   from {
     opacity: 0;
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
+    transform: translateY(-50px);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
-
-@-webkit-keyframes Appear {
-  from {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
 @keyframes Appear {
   from {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    transform: translateY(50px);
     opacity: 0;
   }
   to {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
     opacity: 1;
   }
 }
-
 .down {
-  -webkit-animation-name: Down;
-          animation-name: Down;
-  -webkit-animation-duration: .4s;
-          animation-duration: .4s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation-name: Down;
+  animation-duration: 0.4s;
+  animation-fill-mode: backwards;
 }
 
 .appearAnim {
-  -webkit-animation-name: Appear;
-          animation-name: Appear;
-  -webkit-animation-duration: .2s;
-          animation-duration: .2s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation-name: Appear;
+  animation-duration: 0.2s;
+  animation-fill-mode: backwards;
 }
 
 /**/
@@ -511,60 +358,41 @@ footer p a {
     font-size: 55%;
   }
 }
-
 @media only screen and (min-width: 501px) {
   :root {
-    font-size: 45%;
+    font-size: 50%;
   }
 }
-
-@media only screen and (min-width: 1450px) {
-  :root {
-    font-size: 55%;
-  }
-}
-
 @media only screen and (min-width: 1700px) {
   :root {
     font-size: 70%;
   }
 }
-
 @media only screen and (min-width: 2000px) {
   :root {
     font-size: 80%;
   }
 }
-
 @media only screen and (min-width: 2400px) {
   :root {
     font-size: 100%;
   }
 }
-
 @media only screen and (min-width: 3840px) and (min-height: 2160px) {
   :root {
     font-size: 150%;
   }
 }
-
 /**/
 #copy__popup-alert {
   background-color: #44475A;
   border: solid 1px #fff2;
   border-radius: 1rem;
-  -webkit-box-shadow: 0 0 50px #0005;
-          box-shadow: 0 0 50px #0005;
+  box-shadow: 0 0 50px #0005;
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-size: 2.5rem;
   font-size: clamp(13px, 5vw, 2.5rem);
   width: 80vw;
@@ -573,19 +401,17 @@ footer p a {
   padding: 2rem 0;
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .offScreen {
-  -webkit-transition-duration: .15s;
-          transition-duration: .15s;
+  transition-duration: 0.15s;
   top: -10rem;
 }
 
 .onScreen {
-  -webkit-transition-duration: .3s;
-          transition-duration: .3s;
+  transition-duration: 0.3s;
   top: 5rem;
 }
+
 /*# sourceMappingURL=app.css.map */
