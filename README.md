@@ -29,7 +29,6 @@ Hello, as you may have noticed my name is Gabriel, so I will tell you a bit abou
 <code><img title='Next.Js' height="30" src=".GitHub/nextjs.svg"></code>
 <code><img title='React Native' alt='React Native' height="30" src=".GitHub/react-native.svg"></code>
 <code><img title='Swift' height="30" src=".GitHub/swift.svg"></code>
->>>>>>> 9c18042c13eef47d28e3271649fcbb6c8602933e
 
 <br>
 
