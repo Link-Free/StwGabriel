@@ -26,6 +26,7 @@ section#options {
          a {
 
             border-radius  : 1.4rem;
+            border         : solid .2rem #fff5;
             cursor         : pointer;
             text-decoration: none;
 
@@ -69,7 +70,7 @@ section#options {
 
          a:hover {
 
-            border: solid 2px #fff;
+            border: solid .2rem #fff;
          }
       }
 
@@ -107,13 +108,13 @@ section#options {
 
          a {
 
-            background: #282A36;
+            background: #44475A;
             z-index   : 1;
          }
 
          .mailInfo {
 
-            background   : #282A36;
+            background   : #44475A;
             border       : none;
             border-radius: 100%;
             box-shadow   : 0 0 5px #0003;
@@ -151,9 +152,11 @@ section#options {
 @media only screen and (max-width:600px) {
 
    section#options {
+
       ul {
+
          .mailBox {
-            
+
             .mailInfo {
 
                display: none;

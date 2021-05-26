@@ -112,6 +112,7 @@ section#options ul {
 }
 section#options ul .option a {
   border-radius: 1.4rem;
+  border: solid 0.2rem #fff5;
   cursor: pointer;
   text-decoration: none;
   position: relative;
@@ -140,7 +141,7 @@ section#options ul .option a p {
   margin-top: 1rem;
 }
 section#options ul .option a:hover {
-  border: solid 2px #fff;
+  border: solid 0.2rem #fff;
 }
 section#options ul .yt {
   background: #ca0000;
@@ -163,11 +164,11 @@ section#options ul .mailBox {
   height: 100%;
 }
 section#options ul .mailBox a {
-  background: #282A36;
+  background: #44475A;
   z-index: 1;
 }
 section#options ul .mailBox .mailInfo {
-  background: #282A36;
+  background: #44475A;
   border: none;
   border-radius: 100%;
   box-shadow: 0 0 5px #0003;
@@ -378,7 +379,7 @@ footer p a {
 
 .offScreen {
   transition-duration: 0.15s;
-  top: -10rem;
+  top: -15rem;
 }
 
 .onScreen {
