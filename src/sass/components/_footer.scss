@@ -1,4 +1,7 @@
 //
+
+@use '../abstracts'as var;
+
 footer {
 
    font-size: 13px;
@@ -11,11 +14,11 @@ footer {
 
    p {
 
-      color: #fff;
+      color: var.$white;
 
       a {
 
-         color          : #10a6d3;
+         color          : var.$blue;
          text-decoration: none;
       }
    }

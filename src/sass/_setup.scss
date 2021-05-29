@@ -13,9 +13,11 @@ of course there will be a difference between what I want and the end result,
 but it is only until the browsers provide full support for the 'clamp ()'
 
 */
+@use 'abstracts'as var;
+
 :root {
 
-   color: #fff;
+   color: var.$white;
 
    font-size  : 62.5%;
    font-family: 'Montserrat', sans-serif;
@@ -25,7 +27,7 @@ but it is only until the browsers provide full support for the 'clamp ()'
 
    box-sizing: border-box;
 
-   text-shadow: 0 0 5rem #0005;
+   text-shadow: 0 0 5rem var.$text-shadow;
    font-weight: 600;
 
    padding: 0;
@@ -36,7 +38,7 @@ but it is only until the browsers provide full support for the 'clamp ()'
 
 body {
 
-   background     : #21222C;
+   background     : var.$main-color;
    display        : flex;
    align-items    : center;
    justify-content: space-around;
@@ -53,20 +55,4 @@ li {
 a:active {
 
    transform: scale(.95);
-}
-
-body {
-
-   display       : flex;
-   flex-direction: column;
-
-   main {
-
-      display        : flex;
-      flex-direction : column;
-      align-items    : center;
-      justify-content: center;
-
-      margin: 0 auto;
-   }
 }

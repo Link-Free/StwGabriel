@@ -1,5 +1,7 @@
 //
-section#options {
+@use '../abstracts'as var;
+
+#options {
 
    display        : flex;
    justify-content: center;
@@ -23,19 +25,26 @@ section#options {
 
       .option {
 
+         position: relative;
+
          a {
 
-            border-radius  : 1.4rem;
-            border         : solid .2rem #fff5;
-            cursor         : pointer;
-            text-decoration: none;
+            background         : transparent;
+            background-size    : 120%;
+            background-position: bottom center;
+            border-radius      : 1.4rem;
+            border             : solid .2rem #0000;
+            cursor             : pointer;
+            text-decoration    : none;
 
             position: relative;
 
             display        : flex;
-            flex-direction : column;
-            align-items    : center;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
+            
+            gap: 0;
 
             font-size: 2rem;
             font-size: clamp(16px, 6vw, 2.5rem);
@@ -60,67 +69,35 @@ section#options {
                }
             }
 
-            p {
+            span {
 
                color: #fff;
+            }
 
-               margin-top: 1rem;
+            &:hover {
+
+               border: solid .2rem #fff;
             }
          }
-
-         a:hover {
-
-            border: solid .2rem #fff;
-         }
       }
 
-      .yt {
+      .option--mail {
 
-         background: #ca0000;
-      }
+         a.mail {
 
-      .ig {
-
-         background-image: linear-gradient(to left bottom, #8134af, #a42aa4, #c02095, #d61f86, #e62975, #ee336b, #f43f60, #f84c56, #fa544f, #fa5d48, #fb6542, #fa6e3b);
-
-      }
-
-      .tt {
-
-         background-color: #0076a5;
-      }
-
-      .gh {
-
-         background: #381b6e;
-      }
-
-      .lkd {
-
-         background-color: #0A66C2;
-      }
-
-      .mailBox {
-
-         position: relative;
-         width   : 100%;
-         height  : 100%;
-
-         a {
-
-            background: #44475A;
+            background: var.$email;
             z-index   : 1;
          }
 
-         .mailInfo {
+         .mail-info {
 
-            background   : #44475A;
+            background   : var.$email;
             border       : none;
             border-radius: 100%;
             box-shadow   : 0 0 5px #0003;
             display      : block;
 
-            cursor: pointer;
+            cursor: help;
 
             width   : 4.4rem;
             width   : clamp(4rem, 2vw, 6rem);
@@ -128,24 +105,51 @@ section#options {
             height  : clamp(4rem, 2vw, 6rem);
             position: absolute;
 
-            top    : -1rem;
-            right  : -1rem;
-            z-index: 20;
+            top  : -1rem;
+            right: -1rem;
 
             overflow: hidden;
 
             svg {
 
-               width : 100%;
-               height: 100%;
+               width : 4rem;
+               height: 4rem;
             }
          }
 
-         &:hover button.mailInfo {
+         &:hover button.mail-info {
 
             display: block;
          }
       }
+
+      a.yt {
+
+         background: var.$youtube;
+      }
+
+      a.ig {
+
+         background-image: linear-gradient(to left bottom, var.$ig-one, var.$ig-two, var.$ig-three);
+
+      }
+
+      a.tt {
+
+         background: var.$twitter;
+      }
+
+      a.gh {
+
+         background: var.$github;
+      }
+
+      a.lkd {
+
+         background: var.$linkedin;
+      }
+
+
    }
 }
 
@@ -155,9 +159,9 @@ section#options {
 
       ul {
 
-         .mailBox {
+         .option--mail {
 
-            .mailInfo {
+            .mail-info {
 
                display: none;
             }

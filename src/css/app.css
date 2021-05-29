@@ -1,4 +1,28 @@
-/**/
+/*
+ {
+    "name": "Dracula",
+       "cursorColor": "#F8F8F2",
+       "selectionBackground": "#44475A",
+       "background": "#282A36",
+       "foreground": "#F8F8F2",
+       "black": "#21222C",
+       "blue": "#BD93F9",
+       "cyan": "#8BE9FD",
+       "green": "#50FA7B",
+       "purple": "#FF79C6",
+       "red": "#FF5555",
+       "white": "#F8F8F2",
+       "yellow": "#F1FA8C",
+       "brightBlack": "#6272A4",
+       "brightBlue": "#D6ACFF",
+       "brightCyan": "#A4FFFF",
+       "brightGreen": "#69FF94",
+       "brightPurple": "#FF92DF",
+       "brightRed": "#FF6E6E",
+       "brightWhite": "#FFFFFF",
+       "brightYellow": "#FFFFA5"
+ }
+*/
 /*
 
 if you see duplicate code like: 
@@ -45,19 +69,6 @@ a:active {
   transform: scale(0.95);
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-body main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-/**/
 header#header {
   display: flex;
   flex-direction: column;
@@ -87,19 +98,19 @@ header#header h1 {
   margin: 1rem 0;
 }
 header#header span {
-  color: #ddd;
+  color: #fff;
   font-size: 1.4rem;
   font-size: clamp(13px, 3vw, 2rem);
   font-weight: 500;
+  opacity: 0.7;
 }
 
-/**/
-section#options {
+#options {
   display: flex;
   justify-content: center;
   animation-delay: 0.1s;
 }
-section#options ul {
+#options ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -110,9 +121,15 @@ section#options ul {
   width: 90%;
   width: clamp(27rem, 90vw, 50rem);
 }
-section#options ul .option a {
+#options ul .option {
+  position: relative;
+}
+#options ul .option a {
+  background: transparent;
+  background-size: 120%;
+  background-position: bottom center;
   border-radius: 1.4rem;
-  border: solid 0.2rem #fff5;
+  border: solid 0.2rem #0000;
   cursor: pointer;
   text-decoration: none;
   position: relative;
@@ -120,60 +137,40 @@ section#options ul .option a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0;
   font-size: 2rem;
   font-size: clamp(16px, 6vw, 2.5rem);
   list-style: none;
   height: 100%;
   padding: 2rem 0;
 }
-section#options ul .option a i {
+#options ul .option a i {
   height: 4.5rem;
   height: clamp(4rem, 5vw, 5rem);
   width: 100%;
   width: clamp(4rem, 5vw, 5rem);
 }
-section#options ul .option a i svg {
+#options ul .option a i svg {
   width: 100%;
   height: 100%;
 }
-section#options ul .option a p {
+#options ul .option a span {
   color: #fff;
-  margin-top: 1rem;
 }
-section#options ul .option a:hover {
+#options ul .option a:hover {
   border: solid 0.2rem #fff;
 }
-section#options ul .yt {
-  background: #ca0000;
-}
-section#options ul .ig {
-  background-image: linear-gradient(to left bottom, #8134af, #a42aa4, #c02095, #d61f86, #e62975, #ee336b, #f43f60, #f84c56, #fa544f, #fa5d48, #fb6542, #fa6e3b);
-}
-section#options ul .tt {
-  background-color: #0076a5;
-}
-section#options ul .gh {
-  background: #381b6e;
-}
-section#options ul .lkd {
-  background-color: #0A66C2;
-}
-section#options ul .mailBox {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-section#options ul .mailBox a {
+#options ul .option--mail a.mail {
   background: #44475A;
   z-index: 1;
 }
-section#options ul .mailBox .mailInfo {
+#options ul .option--mail .mail-info {
   background: #44475A;
   border: none;
   border-radius: 100%;
   box-shadow: 0 0 5px #0003;
   display: block;
-  cursor: pointer;
+  cursor: help;
   width: 4.4rem;
   width: clamp(4rem, 2vw, 6rem);
   height: 4.4rem;
@@ -181,23 +178,36 @@ section#options ul .mailBox .mailInfo {
   position: absolute;
   top: -1rem;
   right: -1rem;
-  z-index: 20;
   overflow: hidden;
 }
-section#options ul .mailBox .mailInfo svg {
-  width: 100%;
-  height: 100%;
+#options ul .option--mail .mail-info svg {
+  width: 4rem;
+  height: 4rem;
 }
-section#options ul .mailBox:hover button.mailInfo {
+#options ul .option--mail:hover button.mail-info {
   display: block;
+}
+#options ul a.yt {
+  background: #ca0000;
+}
+#options ul a.ig {
+  background-image: linear-gradient(to left bottom, #8134af, #f43f60, #fa6e3b);
+}
+#options ul a.tt {
+  background: #0076a5;
+}
+#options ul a.gh {
+  background: #381b6e;
+}
+#options ul a.lkd {
+  background: #0A66C2;
 }
 
 @media only screen and (max-width: 600px) {
-  section#options ul .mailBox .mailInfo {
+  section#options ul .option--mail .mail-info {
     display: none;
   }
 }
-/**/
 footer {
   font-size: 13px;
   display: flex;
@@ -209,59 +219,68 @@ footer p {
   color: #fff;
 }
 footer p a {
-  color: #10a6d3;
+  color: #8BE9FD;
   text-decoration: none;
 }
 
-/**/
-.modalOverlay {
+.modal-overlay {
   background: #000b;
   display: none;
-  align-items: center;
-  justify-content: center;
+  height: 100vh;
+  width: 100vw;
   position: fixed;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  right: 0;
-  z-index: 200;
+  overflow: hidden;
+  z-index: 101;
 }
-.modalOverlay .modalBox {
+.modal-overlay .click-to-exit {
+  cursor: pointer;
+  position: fixed;
+  z-index: 101;
+  min-width: 100%;
+  min-height: 100vh;
+}
+.modal-overlay .modal-box {
   background: #343747;
   border-radius: 2rem;
+  font-weight: 500;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 90vw;
-  width: clamp(25rem, 90vw, 60rem);
+  width: min(60rem, 95vw);
   padding: 6rem 3rem 10rem 3rem;
-  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 102;
 }
-.modalOverlay .modalBox > button {
+.modal-overlay .modal-box > button {
   background: #343747;
   border: none;
   border-top: solid 0.2rem #fff3;
   border-radius: 0 0 2rem 2rem;
-  cursor: pointer;
+  cursor: url("../assets/cursor-copy.cur"), pointer;
   color: #fff;
   font-size: 2.2rem;
+  font-weight: inherit;
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 2rem;
   transition: filter 0.3s;
 }
-.modalOverlay .modalBox > button:hover {
+.modal-overlay .modal-box > button:hover {
   filter: brightness(0.8);
 }
-.modalOverlay .modalBox p {
+.modal-overlay .modal-box p {
   color: #fff;
   font-size: 2.8rem;
   font-size: clamp(13px, 4.5vw, 2.8rem);
-  font-weight: 500;
+  font-weight: inherit;
 }
-.modalOverlay .modalBox input {
+.modal-overlay .modal-box input {
   background: transparent;
   border: none;
   border: solid 1px #44475A;
@@ -276,23 +295,22 @@ footer p a {
   padding: 2rem;
   margin-top: 4rem;
 }
-.modalOverlay .modalBox input:active {
+.modal-overlay .modal-box input:active {
   transform: scale(0.95);
 }
 
-.active {
+.modal-overlay.active {
   display: flex;
 }
 
 @media (max-width: 380px) {
-  .modalOverlay .modalBox {
+  .modal-overlay .modal-box {
     padding: 4rem 1.5rem 10rem 1.5rem;
   }
-  .modalOverlay .modalBox .inputBox input {
+  .modal-overlay .modal-box .inputBox input {
     font-size: clamp(13px 5vw, 6rem);
   }
 }
-/**/
 @keyframes Down {
   from {
     opacity: 0;
@@ -325,7 +343,6 @@ footer p a {
   animation-fill-mode: backwards;
 }
 
-/**/
 @media only screen and (max-width: 500px) {
   :root {
     font-size: 55%;
@@ -356,7 +373,6 @@ footer p a {
     font-size: 150%;
   }
 }
-/**/
 #copy__popup-alert {
   background-color: #282A36;
   border: solid 1px #44475A33;

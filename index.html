@@ -3,17 +3,19 @@
 
 <head>
    <meta charset="UTF-8">
-   <link rel="stylesheet" type="text/css" href="src/styles/css/app.css">
-   <link rel="stylesheet" href="src/styles/css/particles.css">
+   <link rel="stylesheet" type="text/css" href="src/css/app.css">
+   <link rel="stylesheet" href="src/css/particles.css">
    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
    <!--  -->
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
    <!--  -->
    <link rel="shortcut icon" href="src/assets/Favicon.ico" type="src/assets/image/x-icon">
    <link rel="apple-touch-icon" href="src/assets/Favicon.ico">
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
    <!--  -->
    <meta property="og:type" content="website">
    <meta property="og:url" content="https://stwgabriel.github.io/StwGabriel/">
@@ -45,9 +47,10 @@
          <span>Front-end Student</span>
       </header>
 
-      <main>
-         <section id="options" class="down">
+      <section>
+         <div id="options" class="down">
             <h2 style="font-size: 0;"> social medias link tree </h2>
+
             <ul>
 
                <li class="option">
@@ -62,14 +65,13 @@
                            </path>
                         </svg>
                      </i>
-                     <p>Linkedin</p>
+                     <span>Linkedin</span>
 
                   </a>
                </li>
-
                <li class="option">
 
-                  <a class="blk gh" title="GitHub profile" href="https://github.com/StwGabriel">
+                  <a class="gh" title="GitHub profile" href="https://github.com/StwGabriel">
 
                      <i>
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
@@ -80,11 +82,11 @@
                            </path>
                         </svg>
                      </i>
-                     <p>GitHub</p>
+                     <span>GitHub</span>
 
                   </a>
-               </li>
 
+               </li>
                <li class="option">
 
                   <a class=" blk ig" title="Instagram profile" href="https://instagram.com/StwGabriel">
@@ -97,11 +99,11 @@
                            </path>
                         </svg>
                      </i>
-                     <p>Instagram</p>
+                     <span>Instagram</span>
 
                   </a>
-               </li>
 
+               </li>
                <li class="option">
 
                   <a class=" blk tt" title="Twitter profile" href="https://twitter.com/StwGabriel_/">
@@ -114,11 +116,11 @@
                            </path>
                         </svg>
                      </i>
-                     <p>Twitter</p>
+                     <span>Twitter</span>
 
                   </a>
-               </li>
 
+               </li>
                <li class="option">
 
                   <a class="blk yt" title="Youtube channel"
@@ -137,43 +139,41 @@
 
                         </svg>
                      </i>
-                     <p>Youtube</p>
+                     <span>Youtube</span>
 
                   </a>
+
                </li>
+               <li class="option option--mail">
 
-               <li class="option">
+                  <a class="mail" title=" E-mail: gabbrielsilvactt@gmail.com" href="mailto:gabbrielsilvactt@gmail.com" >
 
-                  <div class="blk mailBox">
+                     <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="fill:#fff;">
+                           <path
+                              d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
+                           </path>
+                        </svg>
+                     </i>
 
-                     <a title=" E-mail: gabbrielsilvactt@gmail.com" href="mailto:gabbrielsilvactt@gmail.com"
-                        class="eml">
+                     <span>E-Mail</span>
+                  </a>
 
-                        <i>
-
-                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="fill:#fff;">
-                              <path
-                                 d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
-                              </path>
-                           </svg>
-                        </i>
-                        <p>E-Mail</p>
-                     </a>
-                     <button title="information if you don't have an e-mail client" onclick='Modal.open()'
-                        class="mailInfo">
+                  <button onclick='Modal.open()' class="mail-info"
+                     title="click for information if you do not have an email client installed">
+                     <i>
                         <svg style="fill:#fffe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                            <path
                               d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 448c-110.532 0-200-89.431-200-200 0-110.495 89.472-200 200-200 110.491 0 200 89.471 200 200 0 110.53-89.431 200-200 200zm107.244-255.2c0 67.052-72.421 68.084-72.421 92.863V300c0 6.627-5.373 12-12 12h-45.647c-6.627 0-12-5.373-12-12v-8.659c0-35.745 27.1-50.034 47.579-61.516 17.561-9.845 28.324-16.541 28.324-29.579 0-17.246-21.999-28.693-39.784-28.693-23.189 0-33.894 10.977-48.942 29.969-4.057 5.12-11.46 6.071-16.666 2.124l-27.824-21.098c-5.107-3.872-6.251-11.066-2.644-16.363C184.846 131.491 214.94 112 261.794 112c49.071 0 101.45 38.304 101.45 88.8zM298 368c0 23.159-18.841 42-42 42s-42-18.841-42-42 18.841-42 42-42 42 18.841 42 42z">
                            </path>
                         </svg>
-                     </button>
-
-                  </div>
+                     </i>
+                  </button>
                </li>
 
             </ul>
-         </section>
-      </main>
+         </div>
+      </section>
 
       <footer>
          <p> by <a title="Desenvolvedor do site" rel="noreferrer" rel="nofollow" target="_blank"
@@ -188,16 +188,18 @@
    <div>
       <p id="copy__popup-alert" class="offScreen"> Copiado! </p>
    </div>
-   <div id="modal" class="modalOverlay">
+   <div id="modal" class="modal-overlay">
+      <div class="click-to-exit" onclick="Modal.close()"></div>
 
-      <div class="appearAnim modalBox">
+      <div class="apper-anim modal-box">
+
          <p>If you do not have an email client:</p>
-
          <div class="inputBox">
-            <input onclick="copy()" id="copyInp" readonly type="text" value="gabbrielsilvactt@gmail.com">
+            <input title="Click To Copy" id="copyInp" readonly type="text" onclick="copy()"
+               value="gabbrielsilvactt@gmail.com">
          </div>
-
          <button onclick="copy(); Modal.close();">Copy and Close</button>
+
       </div>
    </div>
 
