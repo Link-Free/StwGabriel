@@ -10,7 +10,7 @@ header#header {
 
    padding: clamp(2.5rem, 1vw, 10rem);
 
-   width: 100%;
+   width  : 100%;
    z-index: 100;
 
    .header_photo {
@@ -28,17 +28,17 @@ header#header {
 
       img {
 
-image-rendering:pixelated;
-         height: 100%;
-         width : 100%;
+         image-rendering: pixelated;
+         height         : 100%;
+         width          : 100%;
       }
    }
 
    h1 {
 
-      color      : var.$white;
-      font-size  : 2.7rem;
-      font-size  : clamp(16px, 6vw, 3rem);
+      color    : var.$white;
+      font-size: 2.7rem;
+      font-size: clamp(16px, 6vw, 3rem);
 
       margin: 1rem 0;
    }

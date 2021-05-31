@@ -20,7 +20,7 @@
 
    <!--  -->
    <meta property="og:type" content="website">
-   <meta property="og:url" content="https://links.stwgabriel.space/">
+   <meta property="og:url" content="https://links.stwgabriel.space">
    <meta property="og:image" content="https://links.stwgabriel.space/src/assets/Photo.jpg">
    <meta name="theme-color" content="#21222C">
 
@@ -35,7 +35,6 @@
    <title> 404 ERROR - PAGE NOT FOUND </title>
 
    <style>
-      
       * {
 
          box-sizing: border-box;
@@ -53,24 +52,48 @@
       .app {
 
          color: #fff;
-         font-size: 3.5rem;
+         font-size: clamp(2rem, 10vw, 4rem);
          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
          display: flex;
-         justify-content: center;
-         align-items: center;
 
          width: 100%;
          height: 100vh;
       }
 
+      .app-content {
+
+         z-index: 1000;
+
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+
+         margin: auto;
+      }
+
+      a {
+
+         font-size: 2rem;
+         color: #fff;
+      }
+
+      span {
+
+         font-size: clamp(2.5rem, 30vw, 10rem);
+         color: #6272A4;
+      }
    </style>
 </head>
 
 <body>
 
-   <div class="app">
-      <h1> 404?? LMAO </h1>
+   <div class="app" id="particles-js">
+      <div class="app-content">
+         <h1> <span>404</span> ERROR </h1>
+         <a href="https://links.stwgabriel.space/"> go back to the main page </a>
+      </div>
    </div>
 
    <script src="src/js/particles.js"></script>
