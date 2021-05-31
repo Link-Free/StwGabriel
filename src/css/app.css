@@ -88,6 +88,7 @@ header#header .header_photo {
   overflow: hidden;
 }
 header#header .header_photo img {
+  image-rendering: pixelated;
   height: 100%;
   width: 100%;
 }
