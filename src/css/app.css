@@ -223,11 +223,11 @@ section#profile span {
 #options ul .option a:hover {
   border: solid 0.2rem #fff;
 }
-#options ul .option--mail a.mail {
+#options ul .option--email a.mail {
   background: #44475A;
   z-index: 1;
 }
-#options ul .option--mail .mail-info {
+#options ul .option--email .mail-info {
   background: #44475A;
   border: none;
   border-radius: 100%;
@@ -243,11 +243,11 @@ section#profile span {
   right: -1rem;
   overflow: hidden;
 }
-#options ul .option--mail .mail-info svg {
+#options ul .option--email .mail-info svg {
   width: 4rem;
   height: 4rem;
 }
-#options ul .option--mail:hover button.mail-info {
+#options ul .option--email:hover button.mail-info {
   display: block;
 }
 #options ul a.yt {
