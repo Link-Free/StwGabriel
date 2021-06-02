@@ -1,7 +1,7 @@
 //
-function copyPopup() {
+function copiedAlert() {
 
-   const copyPopup = document.getElementById('copy__popup-alert');
+   const copyPopup = document.getElementById('copied-alert');
 
    copyPopup.classList.remove('offScreen');
    copyPopup.classList.add('onScreen');

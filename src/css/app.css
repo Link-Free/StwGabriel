@@ -286,7 +286,7 @@ footer p a {
   text-decoration: none;
 }
 
-.modal-overlay {
+.email-modal-overlay {
   background: #000b;
   display: none;
   height: 100vh;
@@ -297,86 +297,98 @@ footer p a {
   overflow: hidden;
   z-index: 101;
 }
-.modal-overlay .click-to-exit {
+.email-modal-overlay .click-to-exit {
   cursor: pointer;
   position: fixed;
   z-index: 101;
   min-width: 100%;
   min-height: 100vh;
 }
-.modal-overlay .modal-box {
+
+#email-modal {
   background: #343747;
-  border-radius: 2rem;
+  border-radius: max(20px, 2rem);
   font-weight: 500;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 90vw;
   width: min(60rem, 95vw);
-  padding: 6rem 3rem 10rem 3rem;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 102;
 }
-.modal-overlay .modal-box > button {
-  background: #343747;
-  border: none;
-  border-top: solid 0.2rem #fff3;
-  border-radius: 0 0 2rem 2rem;
-  cursor: url("../assets/cursor-copy.cur"), pointer;
+#email-modal .email-modal-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3.5rem 4rem 1rem 4rem;
+}
+#email-modal h2 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+#email-modal span {
   color: #fff;
-  font-size: 2.2rem;
+  font-size: max(14px, 1.8rem);
   font-weight: inherit;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 2rem;
-  transition: filter 0.3s;
+  margin: 1rem 0;
+  opacity: 0.7;
 }
-.modal-overlay .modal-box > button:hover {
-  filter: brightness(0.8);
+#email-modal .email-view-box {
+  margin: 2rem 0;
 }
-.modal-overlay .modal-box p {
-  color: #fff;
-  font-size: 2.8rem;
-  font-size: clamp(13px, 4.5vw, 2.8rem);
-  font-weight: inherit;
-}
-.modal-overlay .modal-box input {
+#email-modal #email-view {
   background: transparent;
-  border: none;
-  border: solid 1px #44475A;
+  border: solid 0.3rem #44475A;
   border-radius: 1rem;
   color: #fff;
   text-align: center;
-  font-size: 2.5rem;
-  font-size: clamp(13px, 4vw, 2.5rem);
-  font-weight: 500;
+  font-size: max(16px, 2.5rem);
+  font-weight: 600;
   height: 100%;
   width: 100%;
   padding: 2rem;
-  margin-top: 4rem;
 }
-.modal-overlay .modal-box input:active {
-  transform: scale(0.95);
+#email-modal #email-view:active {
+  transform: scale(0.98);
+}
+#email-modal .email__action-button {
+  background: #343747;
+  border: none;
+  border-top: solid 0.3rem #44475A;
+  border-radius: 0 0 2rem 2rem;
+  cursor: url("../assets/cursor-copy.cur"), pointer;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem 0;
+  transition: filter 0.3s;
+}
+#email-modal .email__action-button span {
+  color: #fff;
+  font-size: max(18px, 2.2rem);
+  font-weight: 500;
+  opacity: 0.8;
+}
+#email-modal .email__action-button:hover {
+  filter: brightness(0.8);
 }
 
-.overlay--active {
+.modal--active {
   display: flex;
 }
 
 @media (max-width: 380px) {
-  .modal-overlay .modal-box {
-    padding: 4rem 1.5rem 10rem 1.5rem;
+  .email-modal-overlay #email-modal .email-modal-content {
+    padding: 2rem;
   }
-  .modal-overlay .modal-box .inputBox input {
-    font-size: clamp(13px 5vw, 6rem);
+  .email-modal-overlay #email-modal #email-view {
+    padding: 1rem;
   }
 }
-#copy__popup-alert {
+#copied-alert {
   background-color: #44475A;
   border: solid 1px #44475A33;
   border-radius: 1rem;

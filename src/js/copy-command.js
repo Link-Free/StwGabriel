@@ -1,8 +1,8 @@
 function copy() {
 
-   document.getElementById('copyInp').select();
+   document.getElementById('email-view').select();
    document.execCommand('copy')
 
    Modal.close()
-   copyPopup()
+   copiedAlert()
 }
