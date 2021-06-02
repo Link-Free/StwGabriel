@@ -16,10 +16,10 @@
       grid-template-rows   : 1fr 1fr 1fr;
 
       gap: 2rem;
-      gap: clamp(.5rem, 3.5vw, 3rem);
+      gap: clamp(1rem, 3vw, 2.5rem);
 
       height: 45rem;
-      height: clamp(30rem, 60vh, 50rem);
+      min-height: clamp(30rem, 60vh, 50rem);
       width : 90%;
       width : clamp(27rem, 90vw, 50rem);
 

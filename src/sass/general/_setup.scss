@@ -1,0 +1,141 @@
+/*
+
+if you see duplicate code like: 
+
+"
+   width: 3rem;
+   width: clamp (2rem, 5vw, 5rem)
+"
+
+the answer is that some browsers are not compatible with 'clamp ()'so I did this to reverse this problem,
+of course there will be a difference between what I want and the end result,
+but it is only until the browsers provide full support for the 'clamp ()'
+*/
+
+//
+@use '../abstracts'as var;
+
+:root {
+
+   background: var.$main-color;
+   color     : var.$white;
+
+   font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar {
+
+   width: 1.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+
+   background   : var.$second-color;
+   border-radius: 10rem;
+
+   &:hover {
+
+      background: var.$third-color;
+   }
+}
+
+::-webkit-scrollbar-track {
+
+   background: transparent;
+   box-shadow: inset 0 0 5px #fff2;
+}
+
+* {
+
+   box-sizing: border-box;
+
+   text-shadow: 0 0 5rem var.$text-shadow;
+   font-weight: 600;
+
+   padding: 0;
+   margin : 0;
+
+   z-index: 100;
+}
+
+body {
+
+   background: var.$main-color;
+
+   display: flex;
+
+   height: 100vh;
+}
+
+li {
+
+   list-style: none;
+}
+
+a:active {
+
+   transform: scale(.98);
+}
+
+.app {
+
+   margin: auto;
+   padding-top: 2.5rem;
+}
+
+//
+@media only screen and (max-width: 500px) {
+
+   :root {
+
+      font-size: 50%;
+   }
+}
+
+@media only screen and (min-width:500px) {
+
+   :root {
+
+      font-size: 45%;
+   }
+}
+
+@media only screen and (min-width:1280px) {
+
+   :root {
+
+      font-size: 50%;
+   }
+}
+
+@media only screen and (min-width:1600px) {
+
+   :root {
+
+      font-size: 65%;
+   }
+}
+
+@media only screen and (min-width:2000px) {
+
+   :root {
+
+      font-size: 75%;
+   }
+}
+
+@media only screen and (min-width:2400px) {
+
+   :root {
+
+      font-size: 100%;
+   }
+}
+
+@media only screen and (min-width:3840px) and (min-height:2160px) {
+
+   :root {
+
+      font-size: 150%;
+   }
+}

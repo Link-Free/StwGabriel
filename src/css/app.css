@@ -35,12 +35,28 @@ if you see duplicate code like:
 the answer is that some browsers are not compatible with 'clamp ()'so I did this to reverse this problem,
 of course there will be a difference between what I want and the end result,
 but it is only until the browsers provide full support for the 'clamp ()'
-
 */
 :root {
+  background: #21222C;
   color: #fff;
-  font-size: 62.5%;
   font-family: "Montserrat", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #343747;
+  border-radius: 10rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #44475A;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  box-shadow: inset 0 0 5px #fff2;
 }
 
 * {
@@ -55,10 +71,7 @@ but it is only until the browsers provide full support for the 'clamp ()'
 body {
   background: #21222C;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  min-height: 100vh;
-  width: 100%;
+  height: 100vh;
 }
 
 li {
@@ -66,9 +79,49 @@ li {
 }
 
 a:active {
-  transform: scale(0.95);
+  transform: scale(0.98);
 }
 
+.app {
+  margin: auto;
+  padding-top: 2.5rem;
+}
+
+@media only screen and (max-width: 500px) {
+  :root {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 500px) {
+  :root {
+    font-size: 45%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  :root {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  :root {
+    font-size: 65%;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  :root {
+    font-size: 75%;
+  }
+}
+@media only screen and (min-width: 2400px) {
+  :root {
+    font-size: 100%;
+  }
+}
+@media only screen and (min-width: 3840px) and (min-height: 2160px) {
+  :root {
+    font-size: 150%;
+  }
+}
 header#header {
   display: flex;
   flex-direction: column;
@@ -116,9 +169,9 @@ header#header span {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 2rem;
-  gap: clamp(.5rem, 3.5vw, 3rem);
+  gap: clamp(1rem, 3vw, 2.5rem);
   height: 45rem;
-  height: clamp(30rem, 60vh, 50rem);
+  min-height: clamp(30rem, 60vh, 50rem);
   width: 90%;
   width: clamp(27rem, 90vw, 50rem);
 }
@@ -230,6 +283,8 @@ footer p a {
   height: 100vh;
   width: 100vw;
   position: fixed;
+  top: 0;
+  left: 0;
   overflow: hidden;
   z-index: 101;
 }
@@ -300,7 +355,7 @@ footer p a {
   transform: scale(0.95);
 }
 
-.modal-overlay.active {
+.overlay--active {
   display: flex;
 }
 
@@ -312,6 +367,36 @@ footer p a {
     font-size: clamp(13px 5vw, 6rem);
   }
 }
+#copy__popup-alert {
+  background-color: #44475A;
+  border: solid 1px #44475A33;
+  border-radius: 1rem;
+  box-shadow: 0 0 50px #44475A55;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-size: clamp(13px, 5vw, 2.5rem);
+  width: 80vw;
+  max-width: 50rem;
+  width: clamp(25rem, 80vw, 50rem);
+  padding: 2rem 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.offScreen {
+  transition-duration: 0.15s;
+  top: -15rem;
+}
+
+.onScreen {
+  transition-duration: 0.3s;
+  top: 5rem;
+}
+
 @keyframes down-anim {
   from {
     opacity: 0;
@@ -361,66 +446,6 @@ footer p a {
   animation-name: Appear;
   animation-duration: 0.2s;
   animation-fill-mode: backwards;
-}
-
-@media only screen and (max-width: 500px) {
-  :root {
-    font-size: 55%;
-  }
-}
-@media only screen and (min-width: 501px) {
-  :root {
-    font-size: 50%;
-  }
-}
-@media only screen and (min-width: 1700px) {
-  :root {
-    font-size: 70%;
-  }
-}
-@media only screen and (min-width: 2000px) {
-  :root {
-    font-size: 80%;
-  }
-}
-@media only screen and (min-width: 2400px) {
-  :root {
-    font-size: 100%;
-  }
-}
-@media only screen and (min-width: 3840px) and (min-height: 2160px) {
-  :root {
-    font-size: 150%;
-  }
-}
-#copy__popup-alert {
-  background-color: #44475A;
-  border: solid 1px #44475A33;
-  border-radius: 1rem;
-  box-shadow: 0 0 50px #44475A55;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.5rem;
-  font-size: clamp(13px, 5vw, 2.5rem);
-  width: 80vw;
-  max-width: 50rem;
-  width: clamp(25rem, 80vw, 50rem);
-  padding: 2rem 0;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.offScreen {
-  transition-duration: 0.15s;
-  top: -15rem;
-}
-
-.onScreen {
-  transition-duration: 0.3s;
-  top: 5rem;
 }
 
 /*# sourceMappingURL=app.css.map */

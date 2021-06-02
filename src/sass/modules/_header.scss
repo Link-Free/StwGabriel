@@ -3,6 +3,8 @@
 
 header#header {
 
+   // background: #f90;
+
    display        : flex;
    flex-direction : column;
    align-items    : center;
@@ -52,5 +54,4 @@ header#header {
 
       opacity: .7;
    }
-
 }
