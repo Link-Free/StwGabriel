@@ -34,18 +34,16 @@ section#profile {
       }
    }
 
-   h1 {
+   .profile__name {
 
-      color    : var.$white;
       font-size: 2.7rem;
       font-size: clamp(16px, 5.5vw, 3rem);
 
       margin: 1rem 0;
    }
 
-   span {
+   .profile__description {
 
-      color      : var.$white;
       font-size  : 1.4rem;
       font-size  : clamp(13px, 2.8vw, 2rem);
       font-weight: 500;

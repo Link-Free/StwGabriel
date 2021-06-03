@@ -32,11 +32,13 @@
 #email-modal {
 
    background   : var.$second-color;
-   border-radius: max(20px, 2rem);
+   border-radius: 2rem;
 
    font-weight: 500;
 
-   width: min(60rem, 95vw);
+   width    : 90vw;
+   max-width: 60rem;
+   width    : min(60rem, 95vw);
 
    position : fixed;
    top      : 50%;
@@ -67,6 +69,7 @@
    span {
 
       color      : var.$white;
+      font-size  : 1.8rem;
       font-size  : max(14px, 1.8rem);
       font-weight: inherit;
 
@@ -86,6 +89,7 @@
       border-radius: 1rem;
       color        : var.$white;
       text-align   : center;
+      font-size    : 2.5rem;
       font-size    : max(16px, 2.5rem);
 
       font-weight: 600;
@@ -114,7 +118,7 @@
 
       width: 100%;
 
-      padding   : 2rem 0;
+      padding: 2rem 0;
 
       transition: filter .3s;
 

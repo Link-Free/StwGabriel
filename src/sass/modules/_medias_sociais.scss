@@ -1,7 +1,7 @@
 //
 @use '../abstracts'as var;
 
-#options {
+#links {
 
    display        : flex;
    justify-content: center;
@@ -18,78 +18,72 @@
       gap: 2rem;
       gap: clamp(1rem, 3vw, 2.5rem);
 
-      height: 45rem;
+      height    : 45rem;
       min-height: clamp(30rem, 60vh, 50rem);
-      width : 90%;
-      width : clamp(27rem, 90vw, 50rem);
+      width     : 90%;
+      width     : clamp(27rem, 90vw, 50rem);
 
-      .option {
+      .link-option {
+
+         background         : transparent;
+         background-size    : 120%;
+         background-position: bottom center;
+
+         border-radius: 1.4rem;
+         border       : solid .2rem #0000;
+
+         cursor    : pointer;
+         list-style: none;
 
          position: relative;
 
-         a {
+         font-size: 2rem;
+         font-size: clamp(16px, 6vw, 2.5rem);
 
-            background         : transparent;
-            background-size    : 120%;
-            background-position: bottom center;
-            border-radius      : 1.4rem;
-            border             : solid .2rem #0000;
-            cursor             : pointer;
-            text-decoration    : none;
+         .option__url {
 
-            position: relative;
+            text-decoration: none;
 
             display        : flex;
-            flex-direction: column;
-            align-items: center;
+            flex-direction : column;
+            align-items    : center;
             justify-content: center;
-            
-            gap: 0;
-
-            font-size: 2rem;
-            font-size: clamp(16px, 6vw, 2.5rem);
-
-            list-style: none;
 
             height: 100%;
 
             padding: 2rem 0;
+         }
 
-            i {
+         i {
 
-               height: 4.5rem;
-               height: clamp(4rem, 5vw, 5rem);
+            height: 4.5rem;
+            height: clamp(4rem, 5vw, 5rem);
+            width : 100%;
+            width : clamp(4rem, 5vw, 5rem);
+
+            svg {
+
                width : 100%;
-               width : clamp(4rem, 5vw, 5rem);
-
-               svg {
-
-                  width : 100%;
-                  height: 100%;
-               }
+               height: 100%;
             }
+         }
 
-            span {
+         .link__title {
 
-               color: #fff;
-            }
+            margin-top: .5rem;
+         }
 
-            &:hover {
+         &:hover {
 
-               border: solid .2rem #fff;
-            }
+            border: solid .2rem #fff;
          }
       }
 
       .option--email {
 
-         a.mail {
+         background: var.$email;
 
-            background: var.$email;
-            z-index   : 1;
-         }
-
-         .mail-info {
+         .info-bubble {
 
             background   : var.$email;
             border       : none;
@@ -112,8 +106,8 @@
 
             svg {
 
-               width : 4rem;
-               height: 4rem;
+               width : 100%;
+               height: 100%;
             }
          }
 
@@ -123,28 +117,28 @@
          }
       }
 
-      a.yt {
+      .option--youtube {
 
          background: var.$youtube;
       }
 
-      a.ig {
+      .option--instagram {
 
          background-image: linear-gradient(to left bottom, var.$ig-one, var.$ig-two, var.$ig-three);
 
       }
 
-      a.tt {
+      .option--twitter {
 
          background: var.$twitter;
       }
 
-      a.gh {
+      .option--github {
 
          background: var.$github;
       }
 
-      a.lkd {
+      .option--linkedin {
 
          background: var.$linkedin;
       }

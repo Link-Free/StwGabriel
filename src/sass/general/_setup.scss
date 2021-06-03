@@ -18,9 +18,13 @@ but it is only until the browsers provide full support for the 'clamp ()'
 :root {
 
    background: var.$main-color;
-   color     : var.$white;
 
    font-family: 'Montserrat', sans-serif;
+
+   .color--white {
+
+      color: var.$white;
+   }
 }
 
 ::-webkit-scrollbar {
