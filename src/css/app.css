@@ -1,46 +1,7 @@
-/*
- {
-    "name": "Dracula",
-       "cursorColor": "#F8F8F2",
-       "selectionBackground": "#44475A",
-       "background": "#282A36",
-       "foreground": "#F8F8F2",
-       "black": "#21222C",
-       "blue": "#BD93F9",
-       "cyan": "#8BE9FD",
-       "green": "#50FA7B",
-       "purple": "#FF79C6",
-       "red": "#FF5555",
-       "white": "#F8F8F2",
-       "yellow": "#F1FA8C",
-       "brightBlack": "#6272A4",
-       "brightBlue": "#D6ACFF",
-       "brightCyan": "#A4FFFF",
-       "brightGreen": "#69FF94",
-       "brightPurple": "#FF92DF",
-       "brightRed": "#FF6E6E",
-       "brightWhite": "#FFFFFF",
-       "brightYellow": "#FFFFA5"
- }
-*/
-/*
-
-if you see duplicate code like: 
-
-"
-   width: 3rem;
-   width: clamp (2rem, 5vw, 5rem)
-"
-
-the answer is that some browsers are not compatible with 'clamp ()'so I did this to reverse this problem,
-of course there will be a difference between what I want and the end result,
-but it is only until the browsers provide full support for the 'clamp ()'
-*/
 :root {
-  background : #21222C;
+  background: #21222C;
   font-family: "Montserrat", sans-serif;
 }
-
 :root .color--white {
   color: #fff;
 }
@@ -50,10 +11,9 @@ but it is only until the browsers provide full support for the 'clamp ()'
 }
 
 ::-webkit-scrollbar-thumb {
-  background   : #343747;
+  background: #343747;
   border-radius: 10rem;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: #44475A;
 }
@@ -64,18 +24,18 @@ but it is only until the browsers provide full support for the 'clamp ()'
 }
 
 * {
-  box-sizing : border-box;
+  box-sizing: border-box;
   text-shadow: 0 0 5rem #0005;
   font-weight: 600;
-  padding    : 0;
-  margin     : 0;
-  z-index    : 100;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
 }
 
 body {
   background: #21222C;
-  display   : flex;
-  height    : 100vh;
+  display: flex;
+  height: 100vh;
 }
 
 li {
@@ -87,13 +47,13 @@ a:active {
 }
 
 .app {
-  margin         : 0 auto;
-  padding-top    : 2.5rem;
-  display        : flex;
-  flex-direction : column;
+  margin: 0 auto;
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  height         : 100%;
-  max-height     : 90rem;
+  height: 100%;
+  max-height: 90rem;
 }
 
 @media only screen and (max-width: 500px) {
@@ -101,7 +61,6 @@ a:active {
     font-size: 50%;
   }
 }
-
 @media only screen and (min-width: 500px) {
   :root {
     font-size: 45%;
@@ -111,185 +70,159 @@ a:active {
     margin: auto;
   }
 }
-
 @media only screen and (min-width: 1020) {
   :root {
     font-size: 50%;
   }
 }
-
 @media only screen and (min-width: 1600px) {
   :root {
     font-size: 65%;
   }
 }
-
 @media only screen and (min-width: 2000px) {
   :root {
     font-size: 75%;
   }
 }
-
 @media only screen and (min-width: 2400px) {
   :root {
     font-size: 100%;
   }
 }
-
 @media only screen and (min-width: 3840px) and (min-height: 2160px) {
   :root {
     font-size: 150%;
   }
 }
-
 section#profile {
-  display        : flex;
-  flex-direction : column;
-  align-items    : center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding        : 0 2rem 2rem 2rem;
-  width          : 100%;
-  z-index        : 100;
+  padding: 0 2rem 2rem 2rem;
+  width: 100%;
+  z-index: 100;
 }
-
 section#profile .profile__pic {
   border-radius: 100%;
-  height       : 13rem;
-  height       : clamp(9rem, 28vw, 15rem);
-  width        : 13rem;
-  width        : clamp(9rem, 28vw, 15rem);
-  margin       : 1rem;
-  overflow     : hidden;
+  height: 13rem;
+  height: clamp(9rem, 28vw, 15rem);
+  width: 13rem;
+  width: clamp(9rem, 28vw, 15rem);
+  margin: 1rem;
+  overflow: hidden;
 }
-
 section#profile .profile__pic img {
   image-rendering: pixelated;
-  height         : 100%;
-  width          : 100%;
+  height: 100%;
+  width: 100%;
 }
-
 section#profile .profile__name {
   font-size: 2.7rem;
   font-size: clamp(16px, 5.5vw, 3rem);
-  margin   : 1rem 0;
+  margin: 1rem 0;
 }
-
 section#profile .profile__description {
-  font-size  : 1.4rem;
-  font-size  : clamp(13px, 2.8vw, 2rem);
+  font-size: 1.4rem;
+  font-size: clamp(13px, 2.8vw, 2rem);
   font-weight: 500;
-  opacity    : 0.7;
+  opacity: 0.7;
 }
 
 #links {
-  display        : flex;
+  display: flex;
   justify-content: center;
   animation-delay: 0.1s;
 }
-
 #links ul {
-  display              : grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows   : 1fr 1fr 1fr;
-  gap                  : 2rem;
-  gap                  : clamp(1rem, 3vw, 2.5rem);
-  height               : 45rem;
-  min-height           : clamp(30rem, 60vh, 50rem);
-  width                : 90%;
-  width                : clamp(27rem, 90vw, 50rem);
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 2rem;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  height: 45rem;
+  min-height: clamp(30rem, 60vh, 50rem);
+  width: 90%;
+  width: clamp(27rem, 90vw, 50rem);
 }
-
-#links ul .link-option {
-  background         : transparent;
-  background-size    : 120%;
+#links .link-option {
+  background: transparent;
+  background-size: 120%;
   background-position: bottom center;
-  border-radius      : 1.4rem;
-  border             : solid 0.2rem #0000;
-  cursor             : pointer;
-  list-style         : none;
-  position           : relative;
-  font-size          : 2rem;
-  font-size          : clamp(16px, 6vw, 2.5rem);
+  border-radius: 1.4rem;
+  border: solid 0.2rem #0000;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  font-size: 2rem;
+  font-size: clamp(16px, 6vw, 2.5rem);
 }
-
-#links ul .link-option .option__url {
+#links .link-option .option__url {
   text-decoration: none;
-  display        : flex;
-  flex-direction : column;
-  align-items    : center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  height         : 100%;
-  padding        : 2rem 0;
+  height: 100%;
+  padding: 2rem 0;
 }
-
-#links ul .link-option i {
+#links .link-option img {
   height: 4.5rem;
   height: clamp(4rem, 5vw, 5rem);
-  width : 100%;
-  width : clamp(4rem, 5vw, 5rem);
+  width: 100%;
+  width: clamp(4rem, 5vw, 5rem);
 }
-
-#links ul .link-option i svg {
-  width : 100%;
-  height: 100%;
+#links .link-option span {
+  margin-top: 1rem;
 }
-
-#links ul .link-option .link__title {
-  margin-top: 0.5rem;
-}
-
-#links ul .link-option:hover {
+#links .link-option:hover {
   border: solid 0.2rem #fff;
 }
-
-#links ul .option--email {
+#links .option--email {
   background: #44475A;
+  position: relative;
 }
-
-#links ul .option--email .info-bubble {
-  background   : #44475A;
-  border       : none;
+#links .option--email .info-bubble {
+  background: #44475A;
+  border: none;
   border-radius: 100%;
-  box-shadow   : 0 0 5px #0003;
-  display      : block;
-  cursor       : help;
-  width        : 4.4rem;
-  width        : clamp(4rem, 2vw, 6rem);
-  height       : 4.4rem;
-  height       : clamp(4rem, 2vw, 6rem);
-  position     : absolute;
-  top          : -1rem;
-  right        : -1rem;
-  overflow     : hidden;
+  box-shadow: 0 0 5px #0003;
+  display: block;
+  cursor: help;
+  width: 4.4rem;
+  width: clamp(4rem, 2vw, 6rem);
+  height: 4.4rem;
+  height: clamp(4rem, 2vw, 6rem);
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  overflow: hidden;
 }
-
-#links ul .option--email .info-bubble svg {
-  width : 100%;
+#links .option--email .info-bubble img {
+  width: 100%;
   height: 100%;
 }
-
-#links ul .option--email:hover button.mail-info {
+#links .option--email:hover button.mail-info {
   display: block;
 }
-
-#links ul .option--youtube {
+#links .option--youtube {
   background: #ca0000;
 }
-
-#links ul .option--instagram {
+#links .option--instagram {
   background-image: linear-gradient(to left bottom, #8134af, #f43f60, #fa6e3b);
 }
-
-#links ul .option--twitter {
+#links .option--twitter {
   background: #0076a5;
 }
-
-#links ul .option--github {
+#links .option--github {
   background: #381b6e;
 }
-
-#links ul .option--linkedin {
+#links .option--linkedin {
   background: #0A66C2;
+}
+#links .option--spotify {
+  background: #1db954;
 }
 
 @media only screen and (max-width: 600px) {
@@ -297,124 +230,96 @@ section#profile .profile__description {
     display: none;
   }
 }
-
-footer {
-  font-size      : 13px;
-  display        : flex;
-  align-items    : center;
-  justify-content: center;
-  width          : 100%;
-}
-
-footer p {
-  color: #fff;
-}
-
-footer p a {
-  color          : #8BE9FD;
-  text-decoration: none;
-}
-
 .email-modal-overlay {
   background: #000b;
-  display   : none;
-  height    : 100vh;
-  width     : 100vw;
-  position  : fixed;
-  top       : 0;
-  left      : 0;
-  overflow  : hidden;
-  z-index   : 101;
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 101;
 }
-
 .email-modal-overlay .click-to-exit {
-  cursor    : pointer;
-  position  : fixed;
-  z-index   : 101;
-  min-width : 100%;
+  cursor: pointer;
+  position: fixed;
+  z-index: 101;
+  min-width: 100%;
   min-height: 100vh;
 }
 
 #email-modal {
-  background   : #343747;
+  background: #343747;
   border-radius: 2rem;
-  font-weight  : 500;
-  width        : 90vw;
-  max-width    : 60rem;
-  width        : min(60rem, 95vw);
-  position     : fixed;
-  top          : 50%;
-  left         : 50%;
-  transform    : translate(-50%, -50%);
-  z-index      : 102;
+  font-weight: 500;
+  width: 90vw;
+  max-width: 60rem;
+  width: min(60rem, 95vw);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 102;
 }
-
 #email-modal .email-modal-content {
-  text-align     : center;
-  display        : flex;
-  flex-direction : column;
-  align-items    : center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-around;
-  padding        : 3.5rem 4rem 1rem 4rem;
+  padding: 3.5rem 4rem 1rem 4rem;
 }
-
 #email-modal h2 {
-  font-size    : 3rem;
+  font-size: 3rem;
   margin-bottom: 0.5rem;
-  opacity      : 0.8;
+  opacity: 0.8;
 }
-
 #email-modal span {
-  color      : #fff;
-  font-size  : 1.8rem;
-  font-size  : max(14px, 1.8rem);
+  color: #fff;
+  font-size: 1.8rem;
+  font-size: max(14px, 1.8rem);
   font-weight: inherit;
-  margin     : 1rem 0;
-  opacity    : 0.7;
+  margin: 1rem 0;
+  opacity: 0.7;
 }
-
 #email-modal .email-view-box {
   margin: 2rem 0;
 }
-
 #email-modal #email-view {
-  background   : transparent;
-  border       : solid 0.3rem #44475A;
+  background: transparent;
+  border: solid 0.3rem #44475A;
   border-radius: 1rem;
-  color        : #fff;
-  text-align   : center;
-  font-size    : 2.5rem;
-  font-size    : max(16px, 2.5rem);
-  font-weight  : 600;
-  height       : 100%;
-  width        : 100%;
-  padding      : 2rem;
+  color: #fff;
+  text-align: center;
+  font-size: 2.5rem;
+  font-size: max(16px, 2.5rem);
+  font-weight: 600;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
 }
-
 #email-modal #email-view:active {
   transform: scale(0.98);
 }
-
 #email-modal .email__action-button {
-  background   : #343747;
-  border       : none;
-  border-top   : solid 0.3rem #44475A;
+  background: #343747;
+  border: none;
+  border-top: solid 0.3rem #44475A;
   border-radius: 0 0 2rem 2rem;
-  cursor       : url("../assets/cursor-copy.cur"), pointer;
-  position     : relative;
-  bottom       : 0;
-  width        : 100%;
-  padding      : 2rem 0;
-  transition   : filter 0.3s;
+  cursor: url("../assets/cursor-copy.cur"), pointer;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem 0;
+  transition: filter 0.3s;
 }
-
 #email-modal .email__action-button span {
-  color      : #fff;
-  font-size  : max(18px, 2.2rem);
+  color: #fff;
+  font-size: max(18px, 2.2rem);
   font-weight: 500;
-  opacity    : 0.8;
+  opacity: 0.8;
 }
-
 #email-modal .email__action-button:hover {
   filter: brightness(0.8);
 }
@@ -427,97 +332,88 @@ footer p a {
   .email-modal-overlay #email-modal .email-modal-content {
     padding: 2rem;
   }
-
   .email-modal-overlay #email-modal #email-view {
     padding: 1rem;
   }
 }
-
 #copied-alert {
   background-color: #44475A;
-  border          : solid 1px #44475A33;
-  border-radius   : 1rem;
-  box-shadow      : 0 0 50px #44475A55;
-  color           : #fff;
-  display         : flex;
-  justify-content : center;
-  align-items     : center;
-  font-size       : 2.5rem;
-  font-size       : clamp(13px, 5vw, 2.5rem);
-  width           : 80vw;
-  max-width       : 50rem;
-  width           : clamp(25rem, 80vw, 50rem);
-  padding         : 2rem 0;
-  position        : absolute;
-  left            : 50%;
-  transform       : translateX(-50%);
+  border: solid 1px #44475A33;
+  border-radius: 1rem;
+  box-shadow: 0 0 50px #44475A55;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-size: clamp(13px, 5vw, 2.5rem);
+  width: 80vw;
+  max-width: 50rem;
+  width: clamp(25rem, 80vw, 50rem);
+  padding: 2rem 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .offScreen {
   transition-duration: 0.15s;
-  top                : -15rem;
+  top: -15rem;
 }
 
 .onScreen {
   transition-duration: 0.3s;
-  top                : 5rem;
+  top: 5rem;
 }
 
 @keyframes down-anim {
   from {
-    opacity  : 0;
+    opacity: 0;
     transform: translateY(-100px);
   }
-
   to {
-    opacity  : 1;
+    opacity: 1;
     transform: translateY(0);
   }
 }
-
 @keyframes up-anim {
   from {
-    opacity  : 0;
+    opacity: 0;
     transform: translateY(100px);
   }
-
   to {
-    opacity  : 1;
+    opacity: 1;
     transform: translateY(0);
   }
 }
-
 @keyframes Appear {
   from {
     transform: translateY(50px);
-    opacity  : 0;
+    opacity: 0;
   }
-
   to {
     transform: translateY(0px);
-    opacity  : 1;
+    opacity: 1;
   }
 }
-
 .up-anim {
   animation-name: up-anim;
 }
 
 .down-anim {
-  animation-name      : down-anim;
-  animation
+  animation-name: down-anim;
 }
 
 .up-anim,
 .down-anim {
-  animation-delay    : 0.1s;
-  animation-duration : 0.3s;
+  animation-delay: 0.1s;
+  animation-duration: 0.3s;
   animation-fill-mode: backwards;
 }
 
 .appearAnim {
-  animation-name     : Appear;
-  animation-duration : 0.2s;
+  animation-name: Appear;
+  animation-duration: 0.2s;
   animation-fill-mode: backwards;
 }
 

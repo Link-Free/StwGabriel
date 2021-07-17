@@ -1,9 +1,9 @@
 //
-@use '../abstracts'as var;
+@use '../abstracts/colors/'as color;
 
 #copied-alert {
 
-   background-color: var.$email;
+   background-color: color.$email-main;
    border          : solid 1px #44475A33;
    border-radius   : 1rem;
    box-shadow      : 0 0 50px #44475A55;

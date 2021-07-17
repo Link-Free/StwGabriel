@@ -6,6 +6,7 @@ const Modal = {
 
       modal.classList.add('modal--active')
    },
+   
    close() {
       modal.classList.remove('modal--active')
    }

@@ -1,29 +1,15 @@
-/*
-
-if you see duplicate code like: 
-
-"
-   width: 3rem;
-   width: clamp (2rem, 5vw, 5rem)
-"
-
-the answer is that some browsers are not compatible with 'clamp ()'so I did this to reverse this problem,
-of course there will be a difference between what I want and the end result,
-but it is only until the browsers provide full support for the 'clamp ()'
-*/
-
 //
-@use '../abstracts'as var;
+@use '../abstracts/colors/'as color;
 
 :root {
 
-   background: var.$main-color;
+   background: color.$main-color;
 
    font-family: 'Montserrat', sans-serif;
 
    .color--white {
 
-      color: var.$white;
+      color: color.$white;
    }
 }
 
@@ -34,12 +20,12 @@ but it is only until the browsers provide full support for the 'clamp ()'
 
 ::-webkit-scrollbar-thumb {
 
-   background   : var.$second-color;
+   background   : color.$second-color;
    border-radius: 10rem;
 
    &:hover {
 
-      background: var.$third-color;
+      background: color.$third-color;
    }
 }
 
@@ -53,7 +39,7 @@ but it is only until the browsers provide full support for the 'clamp ()'
 
    box-sizing: border-box;
 
-   text-shadow: 0 0 5rem var.$text-shadow;
+   text-shadow: 0 0 5rem color.$text-shadow;
    font-weight: 600;
 
    padding: 0;
@@ -64,7 +50,7 @@ but it is only until the browsers provide full support for the 'clamp ()'
 
 body {
 
-   background: var.$main-color;
+   background: color.$main-color;
 
    display: flex;
 
