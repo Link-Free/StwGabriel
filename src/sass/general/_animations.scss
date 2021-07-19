@@ -1,16 +1,58 @@
 //
+@keyframes appear {
+
+    from {
+
+        transform: translateY(35px);
+        opacity  : 0;
+    }
+
+    to {
+
+        transform: translateY(0);
+        opacity  : 1;
+    }
+}
+
 @keyframes down-anim {
 
     from {
 
-        opacity  : 0;
-        transform: translateY(-100px);
+        transform: translateY(-50px);
     }
 
     to {
 
         opacity  : 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes start--active {
+
+    from {
+
+        transform: scale(.9);
+        opacity  : 0;
+    }
+
+    to {
+
+        transform: scale(1);
+        opacity  : 1;
+    }
+}
+
+@keyframes start--inactive {
+
+    from {
+
+        opacity: 1;
+    }
+
+    to {
+
+        opacity: 0;
     }
 }
 
@@ -18,8 +60,7 @@
 
     from {
 
-        opacity  : 0;
-        transform: translateY(100px);
+        transform: translateY(50px);
     }
 
     to {
@@ -29,39 +70,78 @@
     }
 }
 
-@keyframes Appear {
+@keyframes load {
 
-    from {
+    0% {
 
-        transform: translateY(50px);
-        opacity  : 0;
+        width: 0%;
+        left : 0%;
+        right: auto;
     }
 
-    to {
-        transform: translateY(0px);
-        opacity  : 1;
+    40% {
+
+        width: 100%;
+        left : 0%;
+        right: auto;
+    }
+
+    41% {
+
+        width: 100%;
+        left : auto;
+        right: 0%;
+    }
+
+    99% {
+
+        width: 0%;
+        left : auto;
+        right: 0%;
+    }
+
+    100% {
+
+        width: 0%;
+        left : 0%;
+        right: auto;
     }
 }
 
+.appear-anim,
+.down-anim,
+.load-anim,
+.start-anim,
 .up-anim {
-    animation-name: up-anim;
+
+    animation-delay    : .1s;
+    animation-duration : .2s;
+    animation-fill-mode: backwards;
+}
+
+.appear-anim {
+
+    animation-name    : appear;
+    animation-delay   : 0;
+    animation-duration: .2s;
 }
 
 .down-anim {
     animation-name: down-anim;
 }
 
-.up-anim,
-.down-anim {
+.load-anim {
 
-    animation-delay    : .1s;
-    animation-duration : .3s;
-    animation-fill-mode: backwards;
+    animation-name           : load;
+    animation-iteration-count: infinite;
+    animation-duration       : .5s;
 }
 
-.appearAnim {
+.start-anim {
+    animation-name: start--active;
+}
 
-    animation-name     : Appear;
-    animation-duration : .2s;
-    animation-fill-mode: backwards;
+.up-anim {
+
+    animation-name: up-anim;
 }

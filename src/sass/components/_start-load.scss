@@ -1,0 +1,94 @@
+.start-load {
+
+   &.--active {
+
+      position: fixed;
+      inset   : 0;
+      top     : 0;
+      right   : 0;
+      bottom  : 0;
+      left    : 0;
+
+      background: #21222C;
+
+      display        : flex;
+      flex-direction : column;
+      justify-content: flex-end;
+      align-items    : center;
+
+      padding: 5rem 2rem;
+   }
+
+   &.--inactive {
+
+      display  : none;
+      animation: start--inactive .3s backwards;
+   }
+
+   .load-text {
+
+      color        : #44475A;
+      margin-bottom: 5rem;
+
+      font-size: 3rem;
+   }
+
+   .line-box {
+
+      display : flex;
+      position: relative;
+      height  : 2rem;
+      width   : min(80rem, 70vw);
+
+      z-index: 10000;
+   }
+
+   .line {
+
+      animation-duration: 2s;
+
+      background-color: white;
+      border-radius   : .2rem;
+
+      height: max(6px, 0.6rem);
+      width : min(80rem, 10vw);
+
+      position: absolute;
+   }
+
+   .line1 {
+
+      background     : #BD93F9;
+      animation-delay: 0s;
+   }
+
+   .line2 {
+
+      background     : #8BE9FD;
+      animation-delay: .2s;
+   }
+
+   .line3 {
+
+      background     : #50FA7B;
+      animation-delay: .4s;
+   }
+
+   .line4 {
+
+      background     : #FF5555;
+      animation-delay: .6s;
+   }
+
+   .line5 {
+
+      background     : #F1FA8C;
+      animation-delay: .8s;
+   }
+
+   .line6 {
+
+      background     : #44475A;
+      animation-delay: 1.16s;
+   }
+}

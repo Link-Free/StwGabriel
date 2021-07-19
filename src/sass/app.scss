@@ -1,5 +1,5 @@
 // setup
-@use 'general/setup';
+@use 'general/main';
 
 // modules
 @use 'modules/profile';
@@ -8,6 +8,7 @@
 // components
 @use 'components/email-modal';
 @use "components/copy_popup";
+@use 'components/start-load';
 
 // general styles
 @use "general/animations";

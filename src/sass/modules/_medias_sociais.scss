@@ -1,7 +1,7 @@
 //
 @use '../components/' as comp;
 
-#links {
+#options {
 
    display        : flex;
    justify-content: center;
@@ -24,7 +24,7 @@
       width     : clamp(27rem, 90vw, 50rem);
    }
 
-   @include comp.link-option;
+   @include comp.tree-option;
    @include comp.option-colors;
 }
 
