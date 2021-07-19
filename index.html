@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=" en-US ">
+<html lang="en-US">
 
 <head>
    <meta charset="UTF-8">
@@ -38,23 +38,28 @@
 <body>
    <div id="particles-js"></div>
 
-   <div class="app">
+   <div id="app">
 
-      <section id="profile" class="down-anim">
+      <section id="profile">
 
-         <div class=" profile__pic logo" title=" Profile pic">
-            <img src=" src/assets/Photo.jpg " alt=" profile pic">
+         <div title="profile picture" class="profile__pic logo">
+
+            <img src=" src/assets/Photo.jpg " alt="profile pic">
+
          </div>
+
          <h1 class="profile__name color--white"> Gabriel Silva </h1>
+
          <span class="profile__description color--white"> Front-end Student </span>
 
       </section>
 
-      <section id="links" class="up-anim">
+      <section id="options">
          <h2 style="font-size: 0;"> social medias </h2>
-         <ul class="links-group">
 
-            <li title="linkedin option" class="link-option option--linkedin">
+         <ul title="options">
+
+            <li title="linkedin" class="tree-option option--linkedin">
                <a class="option__url" href="https://link.stwgabriel.space/linkedin">
 
                   <img src="src/assets/linkedin.svg" alt="linkedin">
@@ -63,7 +68,7 @@
                </a>
             </li>
 
-            <li title="github option" class="link-option option--github">
+            <li title="github" class="tree-option option--github">
                <a class="option__url" href="https://link.stwgabriel.space/github">
 
                   <img src="src/assets/github.svg" alt="">
@@ -72,7 +77,7 @@
                </a>
             </li>
 
-            <li title="instagram option" class="link-option option--instagram" title="Instagram profile">
+            <li title="instagram" class="tree-option option--instagram" title="Instagram profile">
                <a class="option__url" href="https://link.stwgabriel.space/instagram">
 
                   <img src="src/assets/instagram.svg" alt="instagram">
@@ -81,7 +86,7 @@
                </a>
             </li>
 
-            <li title="twitter option" class="link-option option--twitter">
+            <li title="twitter" class="tree-option option--twitter">
                <a class="option__url" href="https://link.stwgabriel.space/twitter">
 
                   <img src="src/assets/twitter.svg" alt="twitter">
@@ -90,9 +95,8 @@
                </a>
             </li>
 
-            <li title="spotify option" class="link-option  option--spotify">
-               <a class="option__url"
-                  href="https://link.stwgabriel.space/spotify">
+            <li title="spotify" class="tree-option  option--spotify">
+               <a class="option__url" href="https://link.stwgabriel.space/spotify">
 
                   <img src="src/assets/spotify.svg" alt="Spotify">
                   <span class="link__title color--white">Spotify</span>
@@ -100,19 +104,14 @@
                </a>
             </li>
 
-            <li title=" email option" class="link-option option--email">
-
+            <li title="email" class="tree-option option--email">
                <a class="option__url" href="mailto:gabrielstw@pm.me">
 
                   <img src="src/assets/email.svg" alt="email">
+
                   <span class="link__title color--white">E-Mail</span>
+
                </a>
-
-               <button onclick='Modal.open()' class="info-bubble"
-                  title="click for information if you do not have an email client installed">
-                  <img src="src/assets/info.svg">
-               </button>
-
             </li>
 
          </ul>
@@ -121,14 +120,12 @@
    </div>
 
    <!-- hidden items -->
-   <div>
-      <p id="copied-alert" class="offScreen"> Copied! </p>
-   </div>
-
+   <div id="copied-alert" class="offScreen"> Copied! </div>
    <div class="email-modal-overlay ">
+
       <div class="click-to-exit" onclick="Modal.close()"></div>
 
-      <div id="email-modal" class="modal-box">
+      <div id="email-modal" class="modal-box appear-anim">
 
          <div class="email-modal-content">
 
@@ -147,9 +144,22 @@
 
       </div>
    </div>
+   <div class="start-load --active">
+      <p class="load-text">Loading..</p>
+      <div class="line-box">
+         <div class="line line1 load-anim"></div>
+         <div class="line line2 load-anim"></div>
+         <div class="line line3 load-anim"></div>
+         <div class="line line4 load-anim"></div>
+         <div class="line line5 load-anim"></div>
+         <div class="line line6 load-anim"></div>
+      </div>
+   </div>
 
    <!-- scripts -->
    <script src="src/js/particles.js"></script>
+   <script src="src/js/start.js"></script>
+   <script src="src/js/add-email-info.js"></script>
    <script src='src/js/copied-popup.js'></script>
    <script src="src/js/email-modal.js"></script>
    <script src="src/js/copy-command.js"></script>
