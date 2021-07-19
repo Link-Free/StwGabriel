@@ -5,7 +5,7 @@ function createDefaultOption(name, link, imageUrl) {
    const buttonIcon = document.createElement('img');
    const buttonName = document.createElement('span');
 
-   li.setAttribute('tittle', `${name} button`);
+   li.setAttribute('tittle', `${name}`);
    li.setAttribute('class', `link-option option--${name}`);
 
    anchor.setAttribute('class', 'option__anchor');
