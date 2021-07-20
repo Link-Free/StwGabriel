@@ -77,7 +77,7 @@
                </a>
             </li>
 
-            <li title="instagram" class="tree-option option--instagram" title="Instagram profile">
+            <li title="instagram" class="tree-option option--instagram">
                <a class="option__url" href="https://link.stwgabriel.space/instagram">
 
                   <img src="src/assets/instagram.svg" alt="instagram">
@@ -108,7 +108,6 @@
                <a class="option__url" href="mailto:gabrielstw@pm.me">
 
                   <img src="src/assets/email.svg" alt="email">
-
                   <span class="link__title color--white">E-Mail</span>
 
                </a>
@@ -121,11 +120,11 @@
 
    <!-- hidden items -->
    <div id="copied-alert" class="offScreen"> Copied! </div>
-   <div class="email-modal-overlay ">
+   <div class="email-modal-overlay --inactive">
 
-      <div class="click-to-exit" onclick="Modal.close()"></div>
+      <div title="click to exit" class="click-to-exit"></div>
 
-      <div id="email-modal" class="modal-box appear-anim">
+      <div id="email-modal" class="modal-box">
 
          <div class="email-modal-content">
 
@@ -153,11 +152,13 @@
          <div class="line line4 load-anim"></div>
          <div class="line line5 load-anim"></div>
          <div class="line line6 load-anim"></div>
+         <div class="line line7 load-anim"></div>
       </div>
    </div>
 
    <!-- scripts -->
    <script src="src/js/particles.js"></script>
+   <script src="src/js/app.js"></script>
    <script src="src/js/start.js"></script>
    <script src="src/js/add-email-info.js"></script>
    <script src='src/js/copied-popup.js'></script>
