@@ -1,5 +1,5 @@
 //
-@use '../components/' as comp;
+@use '../components/'as comp;
 
 #options {
 
@@ -22,10 +22,22 @@
       min-height: clamp(30rem, 60vh, 50rem);
       width     : 90%;
       width     : clamp(27rem, 90vw, 50rem);
+
+      &::-webkit-scrollbar {
+
+         display: none;
+      }
    }
 
    @include comp.tree-option;
    @include comp.option-colors;
+
+   -webkit-touch-callout: none;
+   -webkit-user-select  : none;
+   -khtml-user-select   : none;
+   -moz-user-select     : none;
+   -ms-user-select      : none;
+   user-select          : none;
 }
 
 @media only screen and (max-width:600px) {
@@ -34,9 +46,9 @@
 
       ul {
 
-         .option--mail {
+         .option--email {
 
-            .mail-info {
+            .info-bubble {
 
                display: none;
             }

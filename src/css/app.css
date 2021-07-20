@@ -41,21 +41,27 @@ li:active {
 }
 
 body {
+  display: flex;
   min-height: 100vh;
 }
 
 #app {
-  margin: 0 auto;
   padding-top: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  min-height: 91vh;
+  min-height: 100vh;
+  min-height: clamp(70rem, 95vh, 100rem);
+  flex: 1;
 }
 
 @media only screen and (max-width: 500px) {
   :root {
     font-size: 50%;
+  }
+
+  #app {
+    max-height: 76rem;
   }
 }
 @media only screen and (min-width: 500px) {
@@ -115,6 +121,12 @@ section#profile .profile__pic {
   width: clamp(9rem, 28vw, 15rem);
   margin: 1rem;
   overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 section#profile .profile__pic img {
   image-rendering: pixelated;
@@ -137,6 +149,12 @@ section#profile .profile__description {
   display: flex;
   justify-content: center;
   animation-delay: 0.1s;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 #options ul {
   display: grid;
@@ -148,6 +166,9 @@ section#profile .profile__description {
   min-height: clamp(30rem, 60vh, 50rem);
   width: 90%;
   width: clamp(27rem, 90vw, 50rem);
+}
+#options ul::-webkit-scrollbar {
+  display: none;
 }
 #options .tree-option {
   background: transparent;
@@ -194,9 +215,9 @@ section#profile .profile__description {
   display: block;
   cursor: help;
   width: 4.4rem;
-  width: clamp(4rem, 2vw, 6rem);
+  width: clamp(4.5rem, 2vw, 6rem);
   height: 4.4rem;
-  height: clamp(4rem, 2vw, 6rem);
+  height: clamp(4.5rem, 2vw, 6rem);
   position: absolute;
   top: -1rem;
   right: -1rem;
@@ -206,7 +227,7 @@ section#profile .profile__description {
   width: 100%;
   height: 100%;
 }
-#options .option--email:hover button.mail-info {
+#options .option--email:hover button.info-bubble {
   display: block;
 }
 #options .option--youtube {
@@ -225,35 +246,46 @@ section#profile .profile__description {
   background: #0A66C2;
 }
 #options .option--spotify {
-  background: #1db954;
+  background: #10b349;
 }
 
 @media only screen and (max-width: 600px) {
-  section#options ul .option--mail .mail-info {
+  section#options ul .option--email .info-bubble {
     display: none;
   }
 }
 .email-modal-overlay {
   background: #000b;
   display: none;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   width: 100vw;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   overflow: hidden;
   z-index: 101;
 }
+.email-modal-overlay.--active {
+  display: flex;
+}
+.email-modal-overlay.--active #email-modal {
+  margin-bottom: 0px;
+  opacity: 1;
+}
+.email-modal-overlay.--inactive #email-modal {
+  margin-bottom: -25px;
+  opacity: 0;
+}
 .email-modal-overlay .click-to-exit {
-  cursor: pointer;
   position: fixed;
+  inset: 0;
   z-index: 101;
   min-width: 100%;
   min-height: 100vh;
 }
-
-#email-modal {
+.email-modal-overlay #email-modal {
   animation-delay: 0.2;
   background: #343747;
   border-radius: 2rem;
@@ -261,9 +293,10 @@ section#profile .profile__description {
   width: 90vw;
   max-width: 60rem;
   width: min(60rem, 95vw);
+  transition: all 0.15s;
   z-index: 105;
 }
-#email-modal .email-modal-content {
+.email-modal-overlay #email-modal .email-modal-content {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -271,12 +304,12 @@ section#profile .profile__description {
   justify-content: space-around;
   padding: 3.5rem 4rem 1rem 4rem;
 }
-#email-modal h2 {
+.email-modal-overlay #email-modal h2 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
   opacity: 0.8;
 }
-#email-modal span {
+.email-modal-overlay #email-modal span {
   color: #fff;
   font-size: 1.8rem;
   font-size: max(14px, 1.8rem);
@@ -284,10 +317,10 @@ section#profile .profile__description {
   margin: 1rem 0;
   opacity: 0.7;
 }
-#email-modal .email-view-box {
+.email-modal-overlay #email-modal .email-view-box {
   margin: 2rem 0;
 }
-#email-modal #email-view {
+.email-modal-overlay #email-modal #email-view {
   background: transparent;
   border: solid 0.3rem #44475A;
   border-radius: 1rem;
@@ -300,10 +333,10 @@ section#profile .profile__description {
   width: 100%;
   padding: 2rem;
 }
-#email-modal #email-view:active {
+.email-modal-overlay #email-modal #email-view:active {
   transform: scale(0.98);
 }
-#email-modal .email__action-button {
+.email-modal-overlay #email-modal .email__action-button {
   background: #343747;
   border: none;
   border-top: solid 0.3rem #44475A;
@@ -315,18 +348,14 @@ section#profile .profile__description {
   padding: 2rem 0;
   transition: filter 0.3s;
 }
-#email-modal .email__action-button span {
+.email-modal-overlay #email-modal .email__action-button span {
   color: #fff;
   font-size: max(18px, 2.2rem);
   font-weight: 500;
   opacity: 0.8;
 }
-#email-modal .email__action-button:hover {
+.email-modal-overlay #email-modal .email__action-button:hover {
   filter: brightness(0.8);
-}
-
-.modal--active {
-  display: grid;
 }
 
 @media (max-width: 380px) {
@@ -335,6 +364,11 @@ section#profile .profile__description {
   }
   .email-modal-overlay #email-modal #email-view {
     padding: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .email-modal-overlay .click-to-exit {
+    cursor: pointer;
   }
 }
 #copied-alert {
@@ -386,27 +420,32 @@ section#profile .profile__description {
   animation: start--inactive 0.3s backwards;
 }
 .start-load .load-text {
-  color: #44475A;
+  color: #fff6;
   margin-bottom: 5rem;
   font-size: 3rem;
 }
 .start-load .line-box {
+  border-radius: 2rem;
   display: flex;
   position: relative;
-  height: 2rem;
+  height: 0.6rem;
+  height: max(6px, 0.6rem);
+  width: 70vw;
   width: min(80rem, 70vw);
-  z-index: 10000;
+  overflow: hidden;
 }
 .start-load .line {
-  animation-duration: 2s;
+  animation-duration: 2.5s;
   background-color: white;
-  border-radius: 0.2rem;
+  border-radius: 2rem;
   height: max(6px, 0.6rem);
   width: min(80rem, 10vw);
+  height: 6px;
+  width: 100%;
   position: absolute;
 }
 .start-load .line1 {
-  background: #BD93F9;
+  background: #44475A;
   animation-delay: 0s;
 }
 .start-load .line2 {
@@ -422,12 +461,16 @@ section#profile .profile__description {
   animation-delay: 0.6s;
 }
 .start-load .line5 {
-  background: #F1FA8C;
+  background: #BD93F9;
   animation-delay: 0.8s;
 }
 .start-load .line6 {
-  background: #44475A;
+  background: #F1FA8C;
   animation-delay: 1.16s;
+}
+.start-load .line7 {
+  background: #44475A;
+  animation-delay: 1.5s;
 }
 
 @keyframes appear {
@@ -438,6 +481,16 @@ section#profile .profile__description {
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+@keyframes desappear {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(35);
+    opacity: 0;
   }
 }
 @keyframes down-anim {
@@ -503,7 +556,6 @@ section#profile .profile__description {
     right: auto;
   }
 }
-.appear-anim,
 .down-anim,
 .load-anim,
 .start-anim,

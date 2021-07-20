@@ -27,7 +27,7 @@
 
    .load-text {
 
-      color        : #44475A;
+      color        : #fff6;
       margin-bottom: 5rem;
 
       font-size: 3rem;
@@ -35,30 +35,34 @@
 
    .line-box {
 
-      display : flex;
-      position: relative;
-      height  : 2rem;
-      width   : min(80rem, 70vw);
-
-      z-index: 10000;
+      border-radius: 2rem;
+      display      : flex;
+      position     : relative;
+      height       : 0.6rem;
+      height: max(6px, 0.6rem);
+      width        : 70vw;
+      width        : min(80rem, 70vw);
+      overflow     : hidden;
    }
 
    .line {
 
-      animation-duration: 2s;
+      animation-duration: 2.5s;
 
       background-color: white;
-      border-radius   : .2rem;
+      border-radius   : 2rem;
 
       height: max(6px, 0.6rem);
       width : min(80rem, 10vw);
+      height: 6px;
+      width : 100%;
 
       position: absolute;
    }
 
    .line1 {
 
-      background     : #BD93F9;
+      background     : #44475A;
       animation-delay: 0s;
    }
 
@@ -82,13 +86,19 @@
 
    .line5 {
 
-      background     : #F1FA8C;
+      background     : #BD93F9;
       animation-delay: .8s;
    }
 
    .line6 {
 
-      background     : #44475A;
+      background     : #F1FA8C;
       animation-delay: 1.16s;
+   }
+
+   .line7 {
+
+      background     : #44475A;
+      animation-delay: 1.5s;
    }
 }

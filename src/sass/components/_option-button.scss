@@ -66,9 +66,9 @@
       cursor: help;
 
       width   : 4.4rem;
-      width   : clamp(4rem, 2vw, 6rem);
+      width   : clamp(4.5rem, 2vw, 6rem);
       height  : 4.4rem;
-      height  : clamp(4rem, 2vw, 6rem);
+      height  : clamp(4.5rem, 2vw, 6rem);
       position: absolute;
 
       top  : -1rem;
@@ -93,7 +93,7 @@
 
       @include info-bubble;
 
-      &:hover button.mail-info {
+      &:hover button.info-bubble {
 
          display: block;
       }
@@ -127,6 +127,6 @@
 
    .option--spotify {
 
-      background: color.$spotfy-main
+      background: color.$spotify-darker;
    }
 }

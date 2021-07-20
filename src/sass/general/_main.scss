@@ -60,19 +60,21 @@ li:active {
 
 body {
 
+   display   : flex;
    min-height: 100vh;
 }
 
 #app {
 
-   margin     : 0 auto;
    padding-top: 2.5rem;
 
    display        : flex;
    flex-direction : column;
    justify-content: space-evenly;
 
-   min-height: 91vh;
+   min-height: 100vh;
+   min-height: clamp(70rem, 95vh, 100rem);
+   flex      : 1;
 }
 
 //
@@ -81,6 +83,11 @@ body {
    :root {
 
       font-size: 50%;
+   }
+
+   #app {
+
+      max-height: 76rem;
    }
 }
 
@@ -99,8 +106,8 @@ body {
    }
 
    #app {
-      
-      margin   : auto 0;
+
+      margin: auto 0;
    }
 }
 
