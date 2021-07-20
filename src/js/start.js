@@ -5,9 +5,12 @@ const load = document.querySelector('.start-load')
 
 onload = function () {
 
-   load.classList.remove('--active');
-   load.classList.add('--inactive');
-   app.classList.add('start-anim');
-   appProfile.classList.add('down-anim');
-   appOptions.classList.add('up-anim');
+   this.setTimeout(() => {
+      load.classList.remove('--active');
+      load.classList.add('--inactive');
+      app.classList.add('start-anim');
+      appProfile.classList.add('down-anim');
+      appOptions.classList.add('up-anim');
+   },0)
+   
 };

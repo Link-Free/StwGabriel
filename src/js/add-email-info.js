@@ -13,7 +13,7 @@ function addMailInfo(option) {
    const image = document.createElement('img');
 
    button.setAttribute('title', 'click for information if you do not have an email client installed');
-   button.setAttribute('onclick', 'Modal.open()');
+   // button.setAttribute('onclick', 'Modal.open()');
    button.setAttribute('class','info-bubble');
 
    image.setAttribute('src', 'src/assets/info.svg')
