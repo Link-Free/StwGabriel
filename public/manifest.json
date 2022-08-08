@@ -1,0 +1,20 @@
+{
+  "name": "Gabriel's link tree",
+  "short_name": "stwGabriel",
+  "description": "Gabriel's link tree - Gabriel's a front-end developer and a UX Designer",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#22212C",
+  "icons": [
+    {
+      "src": "favicon.webp",
+      "sizes": "210x210",
+      "type": "image/webp"
+    },
+    {
+      "src": "favicon.webp",
+      "sizes": "32x32"
+    }
+  ]
+}
