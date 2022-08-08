@@ -1,45 +1,46 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   * {
 
     box-sizing: border-box;
-    font-family: -apple-system, "ProDisplay", BlinkMacSystemFont, Helvetica, Tahoma, Arial Black,Verdana, Montserrat, sans-serif;
+    font-family: 'Montserrat', Helvetica, Tahoma, Arial Black,Verdana, sans-serif;
     text-shadow: ${({ theme }) => theme.effect.textShadow};
 
     padding: 0;
     margin: 0;
 
-    scrollbar-color: ${({ theme }) => theme.color.main.background} ${({ theme }) => theme.color.main.selection};
+    scrollbar-color:${({ theme }) => theme.color.main.background},
+    ${({ theme }) => theme.color.main.selection};
   }
 
-  @supports (scrollbar-color: ${({ theme }) => theme.color.main.selection} ${({ theme }) => theme.color.main.selection}) {
+  @supports (scrollbar-color: ${({ theme }) => theme.color.main.selection}
+  ${({ theme }) => theme.color.main.selection}) {
 
-    scrollbar-color: ${({ theme }) => theme.color.main.background} ${({ theme }) => theme.color.main.selection};
+    scrollbar-color: ${({ theme }) => theme.color.main.background},
+    ${({ theme }) => theme.color.main.selection};
   }
+
   &::-webkit-scrollbar {
 
-    width: 1vw;
+    width: 1.5rem;
     height: 0;
 
-    @media (max-width: 999px) {
-
-      width: 0vw;
-    }
+    margin: 0;
   }
   &::-webkit-scrollbar-track {
+    margin: 0;
 
     background: ${({ theme }) => theme.color.main.selection};
   }
   &::-webkit-scrollbar-thumb {
-
     background: ${({ theme }) => theme.color.main.background};
     border-radius: ${({ theme }) => theme.metric.borderRadius};
-    border:solid .3vw ${({ theme }) => theme.color.main.selection};
+    border:solid .4rem ${({ theme }) => theme.color.main.selection};
 
     &:hover {
 
-      border: solid .1vw ${({ theme }) => theme.color.main.selection};
+      border: solid .15rem ${({ theme }) => theme.color.main.selection};
     }
 
     @media (max-width: 999px) {
@@ -58,8 +59,6 @@ const GlobalStyles = createGlobalStyle`
 
     background:  ${({ theme }) => theme.color.main.background};
     font-size: 62.5%;
-
-    overflow: hidden;
   }
 
   #root {
@@ -96,23 +95,6 @@ const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.color.main.textColor};
     font-size: 1.6rem;
     font-weight: 500;
-
-    height: 100vh;
-  }
-
-  p,
-  a,
-  li,
-  span,
-  label,
-  button {
-
-    font-family: -apple-system, "ProDisplay", BlinkMacSystemFont, Helvetica, Tahoma, Arial Black,Verdana, Montserrat, sans-serif;
-
-    @media (max-width: 1300px) {
-
-      font-family: -apple-system, "ProText", BlinkMacSystemFont, Helvetica, Tahoma, Arial Black,Verdana, Montserrat, sans-serif;
-    }
   }
 
   a,

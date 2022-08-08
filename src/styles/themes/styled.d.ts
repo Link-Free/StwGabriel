@@ -2,9 +2,7 @@ import 'styled-components'
 
 import darkTheme from './dark'
 
-const theme = lightTheme
-
-console.log('type', theme)
+const theme = darkTheme
 
 export type Theme = typeof theme
 

@@ -20,9 +20,10 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "indent": [
-      "error",
-      "space"
-    ]
+    "semi": "off",
+    "indent": "off",
+    "react/react-in-jsx-scope": "off",
+    "object-curly-spacing": "off",
+    "padded-blocks": "off"
   }
 }

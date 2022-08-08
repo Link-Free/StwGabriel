@@ -39,7 +39,6 @@ const darkTheme = {
 
   effect: {
     containerShadow: '0 0 1.8rem #00000010',
-    elementShadow: '0 0 1.8rem red', // do not use
     itemShadow: '0 0 1rem #00000015',
     textShadow: '.1rem .1rem .5rem #00000015',
   },

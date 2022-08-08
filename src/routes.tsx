@@ -1,3 +1,4 @@
+import React from 'react'
 import { Routes as Switch, Route } from 'react-router-dom'
 
 import Home from './pages/Home'
@@ -7,7 +8,8 @@ import NotFound from './pages/505'
 function Routes() {
   return (
     <Switch>
-      <Route path="/" element={<Home />} />
+      <Route caseSensitive path="/" element={<Home />} />
+      <Route path="/404" element={<NotFound />} />
       <Route element={<NotFound />} />
     </Switch>
   )
