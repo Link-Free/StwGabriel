@@ -25,19 +25,18 @@ function LinkItem({
 }: LinkItemProps) {
   return (
     <LinkItemContainer
-      title={'Go to ' + title}
+      title={'Go to ' + title + ' page'}
       color={color}
       linkStyle={linkStyle}
     >
       <a href={to}>
-        <img src={iconPath} alt={title.toLowerCase() + '-icon'} />
+        {Boolean(iconPath) && <img src={iconPath} alt={title.toLowerCase() + '-icon'} />}
         {labeled && <span>{title}</span>}
       </a>
 
       {additionalButton && (
         <button className='additional-button'>
-          a{'  a '}
-          {'  a '}a
+          a
         </button>
       )}
     </LinkItemContainer>

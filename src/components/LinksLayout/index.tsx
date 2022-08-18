@@ -23,7 +23,7 @@ function LinksLayout() {
       iconPath: '/social-icons/linkedin.svg',
       title: 'Linkedin',
       linkColor: '#0A66C2',
-      labeled: false,
+      labeled: true,
     },
     {
       id: uuid(),
@@ -31,15 +31,31 @@ function LinksLayout() {
       iconPath: '/social-icons/github.svg',
       title: 'Github',
       linkColor: '#381B6E',
-      labeled: false,
+      labeled: true,
     },
     {
       id: uuid(),
-      to: 'https://instagram.com/stwgabriel',
-      iconPath: '/social-icons/instagram.svg',
-      title: 'Instagram',
-      linkColor: 'linear-gradient(60.86deg, #FA6E3B 1.86%, #F43F60 49.98%, #8134AF 100%)',
-      labeled: false,
+      to: 'https://dribbble.com/stwGabriel',
+      iconPath: '/social-icons/dribble.svg',
+      title: 'Dribbble',
+      linkColor: '#ea4c89',
+      labeled: true,
+    },
+    {
+      id: uuid(),
+      to: 'mailto:talktogabriel@proton.me',
+      iconPath: '/social-icons/mail.svg',
+      title: 'Email',
+      linkColor: '#7970A9',
+      labeled: true,
+    },
+    {
+      id: uuid(),
+      to: 'https://stwgabriel.medium.com/',
+      iconPath: '/social-icons/me.svg',
+      title: 'Blog',
+      linkColor: '#454158',
+      labeled: true,
     },
     {
       id: uuid(),
@@ -47,7 +63,7 @@ function LinksLayout() {
       iconPath: '/social-icons/spotify.svg',
       title: 'Spotify',
       linkColor: '#1ED760',
-      labeled: false,
+      labeled: true,
     },
     // {
     //   id: uuid(),
@@ -55,16 +71,26 @@ function LinksLayout() {
     //   iconPath: '/social-icons/youtube.svg',
     //   title: 'Youtube',
     //   linkColor: '#CA0000',
-    //   labeled: false,
+    //   labeled: true,
     // },
+
     {
       id: uuid(),
-      to: 'mailto:talktogabriel@proton.me',
-      iconPath: '/social-icons/mail.svg',
-      title: 'Email',
-      linkColor: '#7970A9',
-      labeled: false,
+      to: 'https://instagram.com/stwgabriel',
+      iconPath: '/social-icons/instagram.svg',
+      title: 'Instagram',
+      linkColor: 'linear-gradient(60.86deg, #FA6E3B 1.86%, #F43F60 49.98%, #8134AF 100%)',
+      labeled: true,
     },
+    {
+      id: uuid(),
+      to: 'https://www.paypal.com/donate/?hosted_button_id=AJLBEFPNTFYQ8',
+      iconPath: '/social-icons/dollar-sign.svg',
+      title: 'Donate',
+      linkColor: '#9580FF',
+      labeled: true,
+    },
+
   ]
 
   const [linksLayout, setLinksLayout] = useState<'grid' | 'row'>('grid')
